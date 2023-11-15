@@ -10,6 +10,7 @@
 
 ### 🍓 아두이노 라즈베리 연동하기
 - [아두이노 명령창 키기](https://makeit402.blogspot.com/2017/08/How-to-install-arduino-IDE-on-raspberry-pi.html?m=1)
+- [라즈베파이에 아두이노 연결 시 주의사항(https://velog.io/@baduckie6231/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4-%EC%95%84%EB%91%90%EC%9D%B4%EB%85%B8-%EC%8B%9C%EB%A6%AC%EC%96%BC-%ED%86%B5%EC%8B%A0)
 
 ### 🛠️ 임베디드와 블루투스 통신
 - [아두이노와 bluetooth 통신](https://ddangeun.tistory.com/59)
