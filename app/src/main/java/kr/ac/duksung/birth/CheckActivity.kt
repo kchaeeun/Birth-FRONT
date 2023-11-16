@@ -22,10 +22,10 @@ class CheckActivity : AppCompatActivity() {
 
         val num = intent.getStringExtra("num")
 
-        val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putString("num", num.toString())
-        editor.apply()
+//        val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+//        val editor = sharedPreferences.edit()
+//        editor.putString("num", num.toString())
+//        editor.apply()
 
         val info: List<String>? = num?.split("-")
 
