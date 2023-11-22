@@ -15,6 +15,7 @@ import static android.text.TextUtils.split;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
@@ -45,7 +46,14 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import kr.ac.duksung.birth.Retrofit.NumApiService;
+import kr.ac.duksung.birth.Retrofit.Serial;
 import kr.ac.duksung.birth.service.RealService;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class BluetoothActivity extends AppCompatActivity
@@ -68,13 +76,32 @@ public class BluetoothActivity extends AppCompatActivity
 
     private String numValue;
 
-    // 이 코드는 다른 부분에 위치할 수 있습니다. Intent가 어디서 오는지에 따라 적절한 위치를 선택하세요.
+    private static final String BASE_URL = "http://192.168.0.21:8080";
+    private static Retrofit retrofit;
+
+    public static Retrofit getRetrofitInstance() {
+        if (retrofit == null) {
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
+        return retrofit;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
+
+        Intent intentNum = getIntent();
+        numValue = intentNum.getStringExtra("num");
+
+        if (numValue != null) {
+            makeApiCall(numValue);
+        }
+
 
         PowerManager pm = (PowerManager) getApplicationContext().getSystemService(POWER_SERVICE);
         boolean isWhiteListing = false;
@@ -127,10 +154,7 @@ public class BluetoothActivity extends AppCompatActivity
         mName = (TextView)findViewById(R.id.textView2);
 //        ListView mMessageListview = (ListView) findViewById(R.id.message_listview);
 
-        Intent intentNum = getIntent();
-        numValue = intentNum.getStringExtra("num");
 
-        // Java 코드로 변환된 SharedPreferences 코드
 
         // SharedPreferences 객체 가져오기
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
@@ -145,16 +169,16 @@ public class BluetoothActivity extends AppCompatActivity
         editor.apply();
 
 
-        List<String> info = Arrays.asList(numValue.split("-"));
+//        List<String> info = Arrays.asList(numValue.split("-"));
 
-        mName.setText(info.get(0) + " 임산부님 환영합니다.");
-
-        // 날짜 전처리
-        String year = info.get(1).substring(0,4);
-        String month = info.get(1).substring(4,6);
-        String day = info.get(1).substring(6);
-        String date = year + "년 " + month + "월 " + day + "일";
-        mInputEditText.append(date);
+//        mName.setText(info.get(0) + " 임산부님 환영합니다.");
+//
+//        // 날짜 전처리
+//        String year = info.get(1).substring(0,4);
+//        String month = info.get(1).substring(4,6);
+//        String day = info.get(1).substring(6);
+//        String date = year + "년 " + month + "월 " + day + "일";
+//        mInputEditText.append(date);
 
 
         mConversationArrayAdapter = new ArrayAdapter<>( this,
@@ -189,7 +213,6 @@ public class BluetoothActivity extends AppCompatActivity
 
         Log.d(TAG, "numValue in onCreate: " + numValue);
     }
-
 
     private void startBluetoothService() {
         Log.d(TAG, "numValue in startBluetoothService: " + numValue);
@@ -254,6 +277,44 @@ public class BluetoothActivity extends AppCompatActivity
         }
     }
 
+    private void makeApiCall(String serialNumber) {
+        NumApiService apiService = getRetrofitInstance().create(NumApiService.class);
+        Call<Serial> call = apiService.getBySerial(serialNumber);
+
+        call.enqueue(new Callback<Serial>() {
+            @Override
+            public void onResponse(Call<Serial> call, Response<Serial> response) {
+                if (response.isSuccessful()) {
+                    Serial serial = response.body();
+                    if (serial != null) {
+                        String name = serial.getName();
+                        String expireDate = serial.getExpireDate();
+
+                        runOnUiThread(() -> {
+                            mName.setText(name + " 임산부님 환영합니다.");
+                            if (expireDate != null) {
+                                mInputEditText.append(expireDate.toString());
+                            } else {
+                                Log.e("Error", "expireDate is null");
+                            }
+                        });
+                    } else {
+                        runOnUiThread(() -> {
+                            Toast.makeText(BluetoothActivity.this,"임산부 인증에 실패하였습니다.", Toast.LENGTH_LONG).show();
+                        });
+                    }
+                } else {
+                    // 서버 응답이 실패한 경우의 처리
+                    Log.e("Retrofit Error", "Error: " + response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Serial> call, Throwable t) {
+                Log.e("Retrofit Error", "Failure: " + t.getMessage());
+            }
+        });
+    }
 
     private class ConnectTask extends AsyncTask<Void, Void, Boolean> {
 

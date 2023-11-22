@@ -41,17 +41,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Birth" >
+        android:theme="@style/Theme.Birth"
+        android:usesCleartextTraffic="true" >
         <service
-            android:name="kr.ac.duksung.birth.BluetoothService"
+            android:name="kr.ac.duksung.birth.service.BluetoothService"
             android:enabled="true"
             android:exported="true" />
-        <service android:name="kr.ac.duksung.birth.RealService" />
-        <service android:name="kr.ac.duksung.birth.RestartService" />
+        <service android:name="kr.ac.duksung.birth.service.RealService" />
+        <service android:name="kr.ac.duksung.birth.service.RestartService" />
 
-        <receiver android:name="kr.ac.duksung.birth.AlarmRecever" />
+        <receiver android:name="kr.ac.duksung.birth.receiver.AlarmRecever" />
         <receiver
-            android:name="kr.ac.duksung.birth.RebootRecever"
+            android:name="kr.ac.duksung.birth.receiver.RebootRecever"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

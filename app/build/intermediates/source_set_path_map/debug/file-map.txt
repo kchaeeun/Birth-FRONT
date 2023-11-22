@@ -26,10 +26,10 @@ kr.ac.duksung.birth.app-constraintlayout-2.1.4-24 C:\Users\kangc\.gradle\caches\
 kr.ac.duksung.birth.app-lifecycle-viewmodel-2.6.1-25 C:\Users\kangc\.gradle\caches\transforms-3\e1e427403df3867ef4c5f1dd522ac9f1\transformed\lifecycle-viewmodel-2.6.1\res
 kr.ac.duksung.birth.app-cardview-1.0.0-26 C:\Users\kangc\.gradle\caches\transforms-3\f6258c9338dc0fe367c50f1f943dd550\transformed\cardview-1.0.0\res
 kr.ac.duksung.birth.app-jetified-viewpager2-1.0.0-27 C:\Users\kangc\.gradle\caches\transforms-3\f805765a441ed38c989c1ca0232b20c7\transformed\jetified-viewpager2-1.0.0\res
-kr.ac.duksung.birth.app-pngs-28 D:\3-2\androidProgramming\Birth\app\build\generated\res\pngs\debug
-kr.ac.duksung.birth.app-resValues-29 D:\3-2\androidProgramming\Birth\app\build\generated\res\resValues\debug
-kr.ac.duksung.birth.app-packageDebugResources-30 D:\3-2\androidProgramming\Birth\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-kr.ac.duksung.birth.app-packageDebugResources-31 D:\3-2\androidProgramming\Birth\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-kr.ac.duksung.birth.app-merged_res-32 D:\3-2\androidProgramming\Birth\app\build\intermediates\merged_res\debug
-kr.ac.duksung.birth.app-debug-33 D:\3-2\androidProgramming\Birth\app\src\debug\res
-kr.ac.duksung.birth.app-main-34 D:\3-2\androidProgramming\Birth\app\src\main\res
+kr.ac.duksung.birth.app-pngs-28 D:\3-2\androidProgramming\CAPSTONE\Birth\app\build\generated\res\pngs\debug
+kr.ac.duksung.birth.app-resValues-29 D:\3-2\androidProgramming\CAPSTONE\Birth\app\build\generated\res\resValues\debug
+kr.ac.duksung.birth.app-packageDebugResources-30 D:\3-2\androidProgramming\CAPSTONE\Birth\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+kr.ac.duksung.birth.app-packageDebugResources-31 D:\3-2\androidProgramming\CAPSTONE\Birth\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+kr.ac.duksung.birth.app-merged_res-32 D:\3-2\androidProgramming\CAPSTONE\Birth\app\build\intermediates\merged_res\debug
+kr.ac.duksung.birth.app-debug-33 D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\debug\res
+kr.ac.duksung.birth.app-main-34 D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\res

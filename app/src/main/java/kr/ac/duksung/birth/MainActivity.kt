@@ -1,26 +1,16 @@
 package kr.ac.duksung.birth
 
-import android.R
-import android.bluetooth.BluetoothAdapter
-import android.bluetooth.BluetoothDevice
-import android.bluetooth.BluetoothSocket
 import android.content.Intent
-import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ListView
-import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kr.ac.duksung.birth.Retrofit.NumApiService
+import kr.ac.duksung.birth.Retrofit.Serial
 import kr.ac.duksung.birth.databinding.ActivityMainBinding
-import java.io.IOException
-import java.io.InputStream
-import java.io.OutputStream
-import java.util.UUID
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,11 +22,42 @@ class MainActivity : AppCompatActivity() {
 
         binding.button.setOnClickListener {
             val num = binding.editText.text.toString()  // edittext 값을 가져올 때는 text.toString()을 사용해준다.
+            makeApiCall(num)
             Log.d("num",num)
-            val intent = Intent(this, BluetoothActivity::class.java)
-            intent.putExtra("num", num)
-            startActivity(intent)
+
         }
+    }
+
+    private fun makeApiCall(serialNumber: String) {
+        val apiService = BluetoothActivity.getRetrofitInstance().create(
+            NumApiService::class.java
+        )
+        val call = apiService.getBySerial(serialNumber)
+        call.enqueue(object : Callback<Serial?> {
+            override fun onResponse(call: Call<Serial?>, response: Response<Serial?>) {
+                if (response.isSuccessful) {
+                    val serial = response.body()
+                    if (serial != null) {
+                        val intent = Intent(this@MainActivity, BluetoothActivity::class.java)
+                        intent.putExtra("num", serialNumber)
+                        startActivity(intent)
+                    }
+
+                } else {
+                    // 서버 응답이 실패한 경우의 처리
+                    Log.e("Retrofit Error", "Error: " + response.message())
+                }
+            }
+
+            override fun onFailure(call: Call<Serial?>, t: Throwable) {
+                Toast.makeText(
+                    this@MainActivity,
+                    "임산부 인증에 실패하였습니다.",
+                    Toast.LENGTH_LONG
+                ).show()
+                Log.e("Retrofit Error", "Failure: " + t.message)
+            }
+        })
     }
 }
 
