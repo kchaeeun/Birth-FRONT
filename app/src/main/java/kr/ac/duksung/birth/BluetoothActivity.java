@@ -47,7 +47,7 @@ import android.widget.Toast;
 
 import kr.ac.duksung.birth.Retrofit.NumApiService;
 import kr.ac.duksung.birth.Retrofit.Serial;
-import kr.ac.duksung.birth.service.RealService;
+//import kr.ac.duksung.birth.service.RealService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -119,13 +119,13 @@ public class BluetoothActivity extends AppCompatActivity
             startActivity(intent);
         }
 
-        if (RealService.serviceIntent==null) {
-            serviceIntent = new Intent(this, RealService.class);
-            startService(serviceIntent);
-        } else {
-            serviceIntent = RealService.serviceIntent;//getInstance().getApplication();
-            Toast.makeText(getApplicationContext(), "already", Toast.LENGTH_LONG).show();
-        }
+//        if (RealService.serviceIntent==null) {
+//            serviceIntent = new Intent(this, RealService.class);
+//            startService(serviceIntent);
+//        } else {
+//            serviceIntent = RealService.serviceIntent;//getInstance().getApplication();
+//            Toast.makeText(getApplicationContext(), "already", Toast.LENGTH_LONG).show();
+//        }
 
         // Bluetooth 권한 확인
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
