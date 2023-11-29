@@ -7,6 +7,8 @@ package kr.ac.duksung.birth;
  * 참고
  * https://github.com/googlesamples/android-BluetoothChat
  * http://www.kotemaru.org/2013/10/30/android-bluetooth-sample.html
+ * 
+ * 주의사항) 애뮬레이터와 서버의 WIFI가 동일해야함
  */
 
 
@@ -15,9 +17,6 @@ import static android.text.TextUtils.split;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import android.Manifest;
@@ -74,7 +73,8 @@ public class BluetoothActivity extends AppCompatActivity
     static boolean isConnectionError = false;
     private static final String TAG = "BluetoothClient";
 
-    private String numValue;
+    private String numValue = "sbs";
+    private Integer boolValue;
 
     private static final String BASE_URL = "http://192.168.0.21:8080";
     private static Retrofit retrofit;
@@ -97,8 +97,12 @@ public class BluetoothActivity extends AppCompatActivity
 
         Intent intentNum = getIntent();
         numValue = intentNum.getStringExtra("num");
+        boolValue = intentNum.getIntExtra("apiCallResult", -1);
 
-        if (numValue != null) {
+        Log.d("happy", numValue);
+        Log.d("bool", String.valueOf(boolValue));
+
+        if (numValue != null && boolValue != -1) {
             makeApiCall(numValue);
         }
 
@@ -168,9 +172,9 @@ public class BluetoothActivity extends AppCompatActivity
         // 변경사항 적용
         editor.apply();
 
-
+//
 //        List<String> info = Arrays.asList(numValue.split("-"));
-
+//
 //        mName.setText(info.get(0) + " 임산부님 환영합니다.");
 //
 //        // 날짜 전처리
@@ -248,7 +252,7 @@ public class BluetoothActivity extends AppCompatActivity
         @Override
         public void run() {
             // 메시지를 보냅니다
-            sendMessage(numValue);
+            sendMessage(boolValue);
 
             // 일정한 간격 이후에 다음 메시지를 보낼 수 있도록 예약
             mHandler.postDelayed(this, MESSAGE_SEND_INTERVAL);
@@ -404,8 +408,9 @@ public class BluetoothActivity extends AppCompatActivity
         mConnectedTask.execute();
 
         // 연결이 성립되면 자동으로 메시지 전송 - sendButton 대신 실행
-        String sendMessage = numValue.toString();
-        if (sendMessage.length() > 0) {
+        Integer sendMessage = boolValue;
+        Log.d("sbs", String.valueOf(sendMessage));
+        if (sendMessage != null) {
             mConnectedTask.write(sendMessage);
         }
     }
@@ -526,12 +531,10 @@ public class BluetoothActivity extends AppCompatActivity
             }
         }
 
-        void write(String msg){
-
-            msg += "\n";
+        void write(Integer msg){
 
             try {
-                mOutputStream.write(msg.getBytes());
+                mOutputStream.write(msg);
                 mOutputStream.flush();
                 Log.d(TAG, "Sent message: " + msg );
             } catch (IOException e) {
@@ -619,7 +622,7 @@ public class BluetoothActivity extends AppCompatActivity
         builder.create().show();
     }
 
-    void sendMessage(String msg){
+    void sendMessage(Integer msg){
 
         if ( mConnectedTask != null ) {
             mConnectedTask.write(msg);

@@ -40,12 +40,19 @@ class MainActivity : AppCompatActivity() {
                     if (serial != null) {
                         val intent = Intent(this@MainActivity, BluetoothActivity::class.java)
                         intent.putExtra("num", serialNumber)
+                        intent.putExtra("apiCallResult", 1)
                         startActivity(intent)
                     }
 
                 } else {
                     // 서버 응답이 실패한 경우의 처리
                     Log.e("Retrofit Error", "Error: " + response.message())
+
+                    // Handle failure by sending "0" to BluetoothActivity
+                    val intent = Intent(this@MainActivity, BluetoothActivity::class.java)
+                    intent.putExtra("num", serialNumber)
+                    intent.putExtra("apiCallResult", 0) // Failure
+                    startActivity(intent)
                 }
             }
 
@@ -56,6 +63,12 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
                 Log.e("Retrofit Error", "Failure: " + t.message)
+
+                // Handle failure by sending "0" to BluetoothActivity
+                val intent = Intent(this@MainActivity, BluetoothActivity::class.java)
+                intent.putExtra("num", serialNumber)
+                intent.putExtra("apiCallResult", "0") // Failure
+                startActivity(intent)
             }
         })
     }
