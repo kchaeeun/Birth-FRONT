@@ -7,7 +7,6 @@
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="33" />
-
     <!-- 위치 권한 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 블루투스 권한 -->
@@ -43,6 +42,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.Birth"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="kr.ac.duksung.birth.FailActivity"
+            android:exported="false" />
+
         <service
             android:name="kr.ac.duksung.birth.service.BluetoothService"
             android:enabled="true"
@@ -58,10 +61,11 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+        <receiver android:name="kr.ac.duksung.birth.alarm.CheckAlarmReceiver" />
 
-        <activity
-            android:name="kr.ac.duksung.birth.CheckActivity"
-            android:exported="false" />
+        <!-- <activity -->
+        <!-- android:name=".CheckActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name="kr.ac.duksung.birth.MainActivity"
             android:exported="true" >
@@ -74,6 +78,10 @@
         <activity
             android:name="kr.ac.duksung.birth.BluetoothActivity"
             android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <service android:name="kr.ac.duksung.birth.TestService" />
 

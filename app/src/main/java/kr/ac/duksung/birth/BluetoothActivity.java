@@ -17,6 +17,11 @@ import static android.text.TextUtils.split;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.ByteBuffer;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Set;
 import java.util.UUID;
 import android.Manifest;
@@ -48,6 +53,7 @@ import android.widget.Toast;
 import kr.ac.duksung.birth.Retrofit.NumApiService;
 import kr.ac.duksung.birth.Retrofit.Serial;
 //import kr.ac.duksung.birth.service.RealService;
+import kr.ac.duksung.birth.service.RealService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -72,7 +78,6 @@ public class BluetoothActivity extends AppCompatActivity
     private ArrayAdapter<String> mConversationArrayAdapter;
     static boolean isConnectionError = false;
     private static final String TAG = "BluetoothClient";
-
     private String numValue = "sbs";
     private Integer boolValue;
 
@@ -97,7 +102,7 @@ public class BluetoothActivity extends AppCompatActivity
 
         Intent intentNum = getIntent();
         numValue = intentNum.getStringExtra("num");
-        boolValue = intentNum.getIntExtra("apiCallResult", -1);
+        boolValue = intentNum.getIntExtra("apiCallResult", 0);
 
         Log.d("happy", numValue);
         Log.d("bool", String.valueOf(boolValue));
@@ -105,7 +110,6 @@ public class BluetoothActivity extends AppCompatActivity
         if (numValue != null && boolValue != -1) {
             makeApiCall(numValue);
         }
-
 
         PowerManager pm = (PowerManager) getApplicationContext().getSystemService(POWER_SERVICE);
         boolean isWhiteListing = false;
@@ -119,13 +123,13 @@ public class BluetoothActivity extends AppCompatActivity
             startActivity(intent);
         }
 
-//        if (RealService.serviceIntent==null) {
-//            serviceIntent = new Intent(this, RealService.class);
-//            startService(serviceIntent);
-//        } else {
-//            serviceIntent = RealService.serviceIntent;//getInstance().getApplication();
-//            Toast.makeText(getApplicationContext(), "already", Toast.LENGTH_LONG).show();
-//        }
+        if (RealService.serviceIntent==null) {
+            serviceIntent = new Intent(this, RealService.class);
+            startService(serviceIntent);
+        } else {
+            serviceIntent = RealService.serviceIntent;//getInstance().getApplication();
+            Toast.makeText(getApplicationContext(), "already", Toast.LENGTH_LONG).show();
+        }
 
         // Bluetooth 권한 확인
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
@@ -139,8 +143,6 @@ public class BluetoothActivity extends AppCompatActivity
                 Intent enableBluetoothIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(enableBluetoothIntent, REQUEST_ENABLE_BLUETOOTH);
             } else {
-                // Bluetooth 서비스 시작
-                startBluetoothService();
             }
         }
 
@@ -153,6 +155,7 @@ public class BluetoothActivity extends AppCompatActivity
 //                }
 //            }
 //        });
+
         mConnectionStatus = (TextView)findViewById(R.id.connection_status_textview);
         mInputEditText = (TextView)findViewById(R.id.input_string_text);
         mName = (TextView)findViewById(R.id.textView2);
@@ -196,6 +199,7 @@ public class BluetoothActivity extends AppCompatActivity
         } else {
             // 권한이 이미 허용된 경우 블루투스 작업 수행
             // 여기에 블루투스 관련 코드 추가
+//            startBluetoothService();
         }
 
         Log.d( TAG, "Initalizing Bluetooth adapter...");
@@ -221,10 +225,10 @@ public class BluetoothActivity extends AppCompatActivity
     private void startBluetoothService() {
         Log.d(TAG, "numValue in startBluetoothService: " + numValue);
 
-        String deviceAddress = "YOUR_DEVICE_ADDRESS";  // 연결할 Bluetooth 장치의 주소를 설정하세요.
-        Intent serviceIntent = new Intent(this, TestService.class);
-        serviceIntent.putExtra("device_address", deviceAddress);
-        ContextCompat.startForegroundService(this, serviceIntent);
+//        String deviceAddress = "YOUR_DEVICE_ADDRESS";  // 연결할 Bluetooth 장치의 주소를 설정하세요.
+//        Intent serviceIntent = new Intent(this, TestService.class);
+//        serviceIntent.putExtra("device_address", deviceAddress);
+//        ContextCompat.startForegroundService(this, serviceIntent);
 
 //        Intent intent = new Intent(getApplicationContext(), BluetoothService.class); // 실행시키고픈 서비스클래스 이름
 //        intent.putExtra("command", numValue); // 필요시 인텐트에 필요한 데이터를 담아준다
@@ -258,6 +262,7 @@ public class BluetoothActivity extends AppCompatActivity
             mHandler.postDelayed(this, MESSAGE_SEND_INTERVAL);
         }
     };
+
 
     @Override
     public void onResume() {
@@ -295,16 +300,29 @@ public class BluetoothActivity extends AppCompatActivity
                         String expireDate = serial.getExpireDate();
 
                         runOnUiThread(() -> {
-                            mName.setText(name + " 임산부님 환영합니다.");
-                            if (expireDate != null) {
-                                mInputEditText.append(expireDate.toString());
-                            } else {
-                                Log.e("Error", "expireDate is null");
-                            }
+                                if (expireDate != null) {
+                                    if (boolValue == 1) {
+                                        mName.setText(name + " 임산부님 환영합니다.");
+                                        mInputEditText.append(expireDate.toString());
+                                    } else {
+                                        mName.setText("임산부 시리얼 넘버 만료 기간이 종료되었습니다.");
+                                        mInputEditText.append(expireDate.toString());
+                                        Toast.makeText(BluetoothActivity.this,"임산부 인증에 실패하였습니다.", Toast.LENGTH_LONG).show();
+                                    }
+                                } else {
+                                    mName.setText("임산부가 아닙니다.");
+                                    mInputEditText.setText("");
+                                    Log.e("Error", "expireDate is done");
+                                }
                         });
                     } else {
                         runOnUiThread(() -> {
+                            mName.setText("임산부가 아닙니다.");
+                            mInputEditText.setText("");
+                                Log.e("Error", "expireDate is done");
+
                             Toast.makeText(BluetoothActivity.this,"임산부 인증에 실패하였습니다.", Toast.LENGTH_LONG).show();
+
                         });
                     }
                 } else {
@@ -531,16 +549,23 @@ public class BluetoothActivity extends AppCompatActivity
             }
         }
 
-        void write(Integer msg){
-
+        //int 값을 표현하는 바이트를 전송하는 문제를 ByteBuffer을 사용해 해결
+        void write(Integer msg) {
             try {
-                mOutputStream.write(msg);
+                // ByteBuffer를 생성하고 int 값을 해당 ByteBuffer에 기록
+                ByteBuffer buffer = ByteBuffer.allocate(Integer.BYTES);
+                buffer.putInt(msg);
+                
+
+                // ByteBuffer의 내용을 바이트 배열로 가져와 전송
+                mOutputStream.write(buffer.array());
                 mOutputStream.flush();
-                Log.d(TAG, "Sent message: " + msg );
+                Log.d(TAG, "Sent message: " + msg);
             } catch (IOException e) {
-                Log.e(TAG, "Exception during send", e );
+                Log.e(TAG, "Exception during send", e);
             }
         }
+
     }
 
 
@@ -570,7 +595,7 @@ public class BluetoothActivity extends AppCompatActivity
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Select device");
+        builder.setTitle("앉은 자리를 선택하세요");
         builder.setCancelable(false);
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
@@ -640,7 +665,7 @@ public class BluetoothActivity extends AppCompatActivity
         if (requestCode == REQUEST_BLUETOOTH_ENABLE) {
             if (resultCode == RESULT_OK) {
                 //BlueTooth is now Enabled
-                showPairedDevicesListDialog();
+//                showPairedDevicesListDialog();
             }
             if (resultCode == RESULT_CANCELED) {
                 showQuitDialog("You need to enable bluetooth");

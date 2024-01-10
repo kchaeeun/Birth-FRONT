@@ -77,6 +77,10 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 attr SharedValue
 attr SharedValueId
 attr actionBarDivider
@@ -2952,6 +2956,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_alram
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -3041,6 +3046,7 @@ drawable notify_panel_notification_icon_bg
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font inter_semibold
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3276,6 +3282,7 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layout_contents
 id left
 id leftToRight
 id legacy
@@ -3731,6 +3738,7 @@ layout mtrl_search_bar
 layout mtrl_search_view
 layout notification_action
 layout notification_action_tombstone
+layout notification_layout
 layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
