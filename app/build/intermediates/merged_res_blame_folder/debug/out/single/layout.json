@@ -20,10 +20,6 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\layout\\activity_blue.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-31:\\layout\\activity_fail.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\layout\\activity_fail.xml"
-    },
-    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-31:\\layout\\notification_layout.xml",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\layout\\notification_layout.xml"
     }
