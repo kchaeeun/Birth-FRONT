@@ -48,7 +48,18 @@ class CheckAlarmReceiver : BroadcastReceiver() {
     private fun showCustomNotification(context: Context) {
 
         Log.d("Alarm setup", "showCustomNotification 호출됨")
+
+        val yesIntent = Intent(context, YesActionReceiver::class.java)
+        val yesPendingIntent = PendingIntent.getBroadcast(context, 0, yesIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+
+        val noIntent = Intent(context, NoActionReceiver::class.java)
+        val noPendingIntent = PendingIntent.getBroadcast(context, 0, noIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+
         val notificationLayout = RemoteViews(context.packageName, R.layout.notification_layout)
+
+        notificationLayout.setOnClickPendingIntent(R.id.tv_yes, yesPendingIntent)
+        notificationLayout.setOnClickPendingIntent(R.id.tv_no, noPendingIntent)
+
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
             .setStyle(NotificationCompat.DecoratedCustomViewStyle())
@@ -59,14 +70,6 @@ class CheckAlarmReceiver : BroadcastReceiver() {
 
         val notificationManager = NotificationManagerCompat.from(context)
         notificationManager.notify(NOTIFICATION_ID, notification)
-    }
-
-    // ResourcesCompat.getFont에서 반환된 폰트를 적용할 수 있도록 확장 함수 생성
-    private fun Typeface?.toFontResponse(): Int {
-        return when (this) {
-            null -> 0 // 폰트를 불러올 수 없는 경우 0을 반환
-            else -> 1 // 원하는 폰트 로딩 성공
-        }
     }
 }
 
@@ -85,7 +88,7 @@ class AlarmManagerUtil {
 //                set(Calendar.MINUTE, 32)    // 분
 //                set(Calendar.SECOND, 0)
 //                Log.d("Alarm setup", timeInMillis.toString())
-                timeInMillis = System.currentTimeMillis() + 1000 // 알림 뜨는 시간 1초 뒤로 설정
+                timeInMillis = System.currentTimeMillis() + 10000 // 알림 뜨는 시간 1초 뒤로 설정
                 Log.d("Alarm setup", timeInMillis.toString())
             }
 

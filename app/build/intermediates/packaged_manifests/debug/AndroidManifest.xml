@@ -42,10 +42,6 @@
         android:testOnly="true"
         android:theme="@style/Theme.Birth"
         android:usesCleartextTraffic="true" >
-        <activity
-            android:name="kr.ac.duksung.birth.FailActivity"
-            android:exported="false" />
-
         <service
             android:name="kr.ac.duksung.birth.service.BluetoothService"
             android:enabled="true"
@@ -61,7 +57,27 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name="kr.ac.duksung.birth.alarm.CheckAlarmReceiver" />
+        <receiver
+            android:name="kr.ac.duksung.birth.alarm.CheckAlarmReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="kr.ac.duksung.birth.YES_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="kr.ac.duksung.birth.alarm.YesActionReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="kr.ac.duksung.birth.YES_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="kr.ac.duksung.birth.alarm.NoActionReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="kr.ac.duksung.birth.NO_ACTION" />
+            </intent-filter>
+        </receiver>
 
         <!-- <activity -->
         <!-- android:name=".CheckActivity" -->
