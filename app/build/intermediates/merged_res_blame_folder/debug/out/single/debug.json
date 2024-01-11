@@ -1,106 +1,126 @@
 [
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/layout_activity_check.xml.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/layout/activity_check.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\layout_activity_fail.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\layout\\activity_fail.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-ldpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-ldpi/ic_launcher_background.png"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-pngs-28:\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/layout_activity_blue.xml.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/layout/activity_blue.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\layout_activity_blue.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\layout\\activity_blue.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-pngs-28:\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/xml_data_extraction_rules.xml.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\layout\\activity_main.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\layout_activity_check.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\layout\\activity_check.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/layout_activity_main.xml.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/layout/activity_main.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/xml_backup_rules.xml.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-pngs-28:\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-xhdpi/ic_launcher_background.png"
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/layout_notification_layout.xml.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/layout/notification_layout.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/layout_activity_bluetooth.xml.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/layout/activity_bluetooth.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\layout_activity_bluetooth.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\layout\\activity_bluetooth.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-xxxhdpi/ic_launcher_background.png"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-pngs-28:\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-hdpi/ic_launcher_background.png"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-mdpi/ic_launcher_background.png"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\layout_notification_layout.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\layout\\notification_layout.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-anydpi-v21_ic_launcher_background.xml.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-anydpi-v21/ic_launcher_background.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-pngs-28:\\drawable-hdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-xxhdpi/ic_launcher_background.png"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\drawable_ic_alram.png.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\drawable\\ic_alram.png"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-pngs-28:\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-pngs-28:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\font_inter_semibold.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\font\\inter_semibold.xml"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-pngs-28:\\drawable-anydpi-v21\\ic_launcher_background.xml"
     }
 ]
