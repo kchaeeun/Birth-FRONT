@@ -28,11 +28,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        CheckAlarmReceiver.setupNotificationChannel(this)
-        AlarmManagerUtil.setRepeatingAlarm(this)
-
-        // 알림 권한
-        checkNotificationPermission()
+//        CheckAlarmReceiver.setupNotificationChannel(this)
+//        AlarmManagerUtil.setRepeatingAlarm(this)
+//
+//        // 알림 권한
+//        checkNotificationPermission()
 
         binding.button.setOnClickListener {
             val num = binding.editText.text.toString()  // edittext 값을 가져올 때는 text.toString()을 사용해준다.
@@ -113,16 +113,16 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun checkNotificationPermission() {
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-            // 권한 없을시 요청
-            ActivityCompat.requestPermissions(
-                this as Activity,
-                arrayOf(android.Manifest.permission.POST_NOTIFICATIONS),
-                CheckAlarmReceiver.REQUEST_NOTIFICATION_PERMISSION
-            )
-        }
-    }
+//    private fun checkNotificationPermission() {
+//        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+//            // 권한 없을시 요청
+//            ActivityCompat.requestPermissions(
+//                this as Activity,
+//                arrayOf(android.Manifest.permission.POST_NOTIFICATIONS),
+//                CheckAlarmReceiver.REQUEST_NOTIFICATION_PERMISSION
+//            )
+//        }
+//    }
 }
 
 

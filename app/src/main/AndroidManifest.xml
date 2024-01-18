@@ -46,6 +46,7 @@
         <receiver android:name=".alarm.CheckAlarmReceiver"
                 android:exported="false">
             <intent-filter>
+<!--                <action android:name="alarm-action"/>-->
                 <action android:name="kr.ac.duksung.birth.YES_ACTION"/>
             </intent-filter>
         </receiver>

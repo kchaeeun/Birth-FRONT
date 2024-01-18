@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:2:1-88:12
-INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:2:1-88:12
-INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:2:1-88:12
-INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:2:1-88:12
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:2:1-89:12
+INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:2:1-89:12
+INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:2:1-89:12
+INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:2:1-89:12
 MERGED from [androidx.databinding:viewbinding:8.1.3] C:\Users\kangc\.gradle\caches\transforms-3\85739b71d69e745418c8777aa85912b0\transformed\jetified-viewbinding-8.1.3\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\kangc\.gradle\caches\transforms-3\ab096c189a3b4f2b683174cf17b24625\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\kangc\.gradle\caches\transforms-3\abb8763ec21db0b9408b2a35261d1f6a\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -107,8 +107,8 @@ ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest
 	android:name
 		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:16:22-74
 application
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:19:5-86:19
-INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:19:5-86:19
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:19:5-87:19
+INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:19:5-87:19
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\kangc\.gradle\caches\transforms-3\ab096c189a3b4f2b683174cf17b24625\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\kangc\.gradle\caches\transforms-3\ab096c189a3b4f2b683174cf17b24625\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\kangc\.gradle\caches\transforms-3\abb8763ec21db0b9408b2a35261d1f6a\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -186,67 +186,67 @@ ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest
 	android:name
 		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:43:25-76
 receiver#kr.ac.duksung.birth.alarm.CheckAlarmReceiver
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:46:9-51:20
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:46:9-52:20
 	android:exported
 		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:47:17-41
 	android:name
 		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:46:19-59
 intent-filter#action:name:kr.ac.duksung.birth.YES_ACTION
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:48:13-50:29
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:48:13-51:29
 action#kr.ac.duksung.birth.YES_ACTION
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:49:17-72
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:50:17-72
 	android:name
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:49:25-70
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:50:25-70
 receiver#kr.ac.duksung.birth.alarm.YesActionReceiver
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:52:9-57:20
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:53:9-58:20
 	android:exported
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:53:17-41
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:54:17-41
 	android:name
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:52:19-58
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:53:19-58
 receiver#kr.ac.duksung.birth.alarm.NoActionReceiver
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:58:9-63:20
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:59:9-64:20
 	android:exported
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:59:17-41
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:60:17-41
 	android:name
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:58:19-57
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:59:19-57
 intent-filter#action:name:kr.ac.duksung.birth.NO_ACTION
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:60:13-62:29
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:61:13-63:29
 action#kr.ac.duksung.birth.NO_ACTION
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:61:17-71
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:62:17-71
 	android:name
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:61:25-69
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:62:25-69
 activity#kr.ac.duksung.birth.MainActivity
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:68:9-76:20
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:69:9-77:20
 	android:exported
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:70:17-40
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:71:17-40
 	android:name
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:69:17-45
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:70:17-45
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:71:13-75:29
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:72:13-76:29
 action#android.intent.action.MAIN
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:72:17-69
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:73:17-69
 	android:name
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:72:25-66
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:73:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:74:17-77
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:75:17-77
 	android:name
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:74:27-74
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:75:27-74
 activity#kr.ac.duksung.birth.BluetoothActivity
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:77:9-79:43
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:78:9-80:43
 	android:exported
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:79:17-40
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:80:17-40
 	android:name
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:78:17-50
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:79:17-50
 meta-data#preloaded_fonts
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:81:9-83:61
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:82:9-84:61
 	android:resource
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:83:17-58
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:84:17-58
 	android:name
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:82:17-47
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:83:17-47
 service#kr.ac.duksung.birth.TestService
-ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:85:17-56
+ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:86:17-56
 	android:name
-		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:85:26-53
+		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:86:26-53
 uses-sdk
 INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml

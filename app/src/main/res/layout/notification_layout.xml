@@ -31,6 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="※ 착석하신 것이 아니라면 '아니오' 버튼을 눌러주세요❗"
+                    android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:layout_marginBottom="15dp"
