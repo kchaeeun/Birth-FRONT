@@ -8,6 +8,7 @@ import android.content.Intent
 import android.os.Build
 import android.util.Log
 import android.widget.RemoteViews
+import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import kr.ac.duksung.birth.R
@@ -18,14 +19,17 @@ class CheckAlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         context?.let {
 
-            val receivedValue = intent?.getIntExtra("seat-value",-1);
-            if (receivedValue == 0) {
+//            val receivedValue = intent?.getIntExtra("seat-value",-1);
+//            Log.d("alarmReceive", receivedValue.toString())
+//
+//            if (receivedValue == 0) {
+                Log.d("alarmReceive", "success")
                 // 채널 등록
                 setupNotificationChannel(context)
                 // 알림 등록
                 showCustomNotification(context)
                 // 알림 서비스 시작
-            }
+//            }
         }
     }
 
@@ -79,32 +83,41 @@ class CheckAlarmReceiver : BroadcastReceiver() {
 
 class AlarmManagerUtil {
     companion object {
+        @RequiresApi(Build.VERSION_CODES.KITKAT)
         fun setRepeatingAlarm(context: Context) {
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             val alarmIntent = Intent(context, CheckAlarmReceiver::class.java).let { intent ->
                 PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
             }
 
-            val calendar: Calendar = Calendar.getInstance().apply {
-//                timeInMillis = System.currentTimeMillis() + 5000
-//                // 여기서 시간을 설정합니다
-//                set(Calendar.HOUR_OF_DAY, 4)    // 시
-//                set(Calendar.MINUTE, 32)    // 분
-//                set(Calendar.SECOND, 0)
+//            val calendar: Calendar = Calendar.getInstance().apply {
+////                timeInMillis = System.currentTimeMillis() + 5000
+////                // 여기서 시간을 설정합니다
+////                set(Calendar.HOUR_OF_DAY, 4)    // 시
+////                set(Calendar.MINUTE, 32)    // 분
+////                set(Calendar.SECOND, 0)
+////                Log.d("Alarm setup", timeInMillis.toString())
+//                timeInMillis = System.currentTimeMillis() + 10000 // 알림 뜨는 시간 1초 뒤로 설정
 //                Log.d("Alarm setup", timeInMillis.toString())
-                timeInMillis = System.currentTimeMillis() + 10000 // 알림 뜨는 시간 1초 뒤로 설정
-                Log.d("Alarm setup", timeInMillis.toString())
-            }
+//            }
 
             // 24시간 마다 반복
-            val interval = 24 * 60 * 60 * 1000L
+//            val interval = 24 * 60 * 60 * 1000L
+//
+//            alarmManager.setRepeating(
+//                AlarmManager.RTC_WAKEUP,
+//                calendar.timeInMillis,
+//                interval,
+//                alarmIntent
+//            )
 
-            alarmManager.setRepeating(
-                AlarmManager.RTC_WAKEUP,
-                calendar.timeInMillis,
-                interval,
-                alarmIntent
-            )
+            val now = System.currentTimeMillis()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, now, alarmIntent)
+            } else {
+                alarmManager.setExact(AlarmManager.RTC_WAKEUP, now, alarmIntent)
+
+            }
 
             Log.d("Alarm setup", "PendingIntent 생성됨: $alarmIntent")
         }

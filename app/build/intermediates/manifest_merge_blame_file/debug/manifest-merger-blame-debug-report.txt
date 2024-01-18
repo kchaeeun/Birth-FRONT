@@ -57,7 +57,7 @@
 28-->[androidx.core:core:1.9.0] C:\Users\kangc\.gradle\caches\transforms-3\ca0e6ead80a38978752616783999ef1e\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 29
 30    <application
-30-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:19:5-86:19
+30-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:19:5-87:19
 31        android:name="kr.ac.duksung.birth.BluetoothApplication"
 31-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:20:13-49
 32        android:allowBackup="true"
@@ -115,148 +115,150 @@
 58            </intent-filter>
 59        </receiver>
 60        <receiver
-60-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:46:9-51:20
+60-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:46:9-52:20
 61            android:name="kr.ac.duksung.birth.alarm.CheckAlarmReceiver"
 61-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:46:19-59
 62            android:exported="false" >
 62-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:47:17-41
 63            <intent-filter>
-63-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:48:13-50:29
-64                <action android:name="kr.ac.duksung.birth.YES_ACTION" />
-64-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:49:17-72
-64-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:49:25-70
-65            </intent-filter>
-66        </receiver>
-67        <receiver
-67-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:52:9-57:20
-68            android:name="kr.ac.duksung.birth.alarm.YesActionReceiver"
-68-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:52:19-58
-69            android:exported="false" >
-69-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:53:17-41
-70            <intent-filter>
-70-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:48:13-50:29
-71                <action android:name="kr.ac.duksung.birth.YES_ACTION" />
-71-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:49:17-72
-71-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:49:25-70
-72            </intent-filter>
-73        </receiver>
-74        <receiver
-74-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:58:9-63:20
-75            android:name="kr.ac.duksung.birth.alarm.NoActionReceiver"
-75-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:58:19-57
-76            android:exported="false" >
-76-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:59:17-41
-77            <intent-filter>
-77-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:60:13-62:29
-78                <action android:name="kr.ac.duksung.birth.NO_ACTION" />
-78-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:61:17-71
-78-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:61:25-69
-79            </intent-filter>
-80        </receiver>
-81
-82        <!-- <activity -->
-83        <!-- android:name=".CheckActivity" -->
-84        <!-- android:exported="false" /> -->
-85        <activity
-85-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:68:9-76:20
-86            android:name="kr.ac.duksung.birth.MainActivity"
-86-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:69:17-45
-87            android:exported="true" >
-87-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:70:17-40
-88            <intent-filter>
-88-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:71:13-75:29
-89                <action android:name="android.intent.action.MAIN" />
-89-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:72:17-69
-89-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:72:25-66
-90
-91                <category android:name="android.intent.category.LAUNCHER" />
-91-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:74:17-77
-91-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:74:27-74
-92            </intent-filter>
-93        </activity>
-94        <activity
-94-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:77:9-79:43
-95            android:name="kr.ac.duksung.birth.BluetoothActivity"
-95-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:78:17-50
-96            android:exported="true" />
-96-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:79:17-40
-97
-98        <meta-data
-98-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:81:9-83:61
-99            android:name="preloaded_fonts"
-99-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:82:17-47
-100            android:resource="@array/preloaded_fonts" />
-100-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:83:17-58
-101
-102        <service android:name="kr.ac.duksung.birth.TestService" />
-102-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:85:17-56
-102-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:85:26-53
+63-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:48:13-51:29
+64
+65                <!-- <action android:name="alarm-action"/> -->
+66                <action android:name="kr.ac.duksung.birth.YES_ACTION" />
+66-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:50:17-72
+66-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:50:25-70
+67            </intent-filter>
+68        </receiver>
+69        <receiver
+69-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:53:9-58:20
+70            android:name="kr.ac.duksung.birth.alarm.YesActionReceiver"
+70-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:53:19-58
+71            android:exported="false" >
+71-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:54:17-41
+72            <intent-filter>
+72-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:48:13-51:29
+73                <action android:name="kr.ac.duksung.birth.YES_ACTION" />
+73-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:50:17-72
+73-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:50:25-70
+74            </intent-filter>
+75        </receiver>
+76        <receiver
+76-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:59:9-64:20
+77            android:name="kr.ac.duksung.birth.alarm.NoActionReceiver"
+77-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:59:19-57
+78            android:exported="false" >
+78-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:60:17-41
+79            <intent-filter>
+79-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:61:13-63:29
+80                <action android:name="kr.ac.duksung.birth.NO_ACTION" />
+80-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:62:17-71
+80-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:62:25-69
+81            </intent-filter>
+82        </receiver>
+83
+84        <!-- <activity -->
+85        <!-- android:name=".CheckActivity" -->
+86        <!-- android:exported="false" /> -->
+87        <activity
+87-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:69:9-77:20
+88            android:name="kr.ac.duksung.birth.MainActivity"
+88-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:70:17-45
+89            android:exported="true" >
+89-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:71:17-40
+90            <intent-filter>
+90-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:72:13-76:29
+91                <action android:name="android.intent.action.MAIN" />
+91-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:73:17-69
+91-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:73:25-66
+92
+93                <category android:name="android.intent.category.LAUNCHER" />
+93-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:75:17-77
+93-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:75:27-74
+94            </intent-filter>
+95        </activity>
+96        <activity
+96-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:78:9-80:43
+97            android:name="kr.ac.duksung.birth.BluetoothActivity"
+97-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:79:17-50
+98            android:exported="true" />
+98-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:80:17-40
+99
+100        <meta-data
+100-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:82:9-84:61
+101            android:name="preloaded_fonts"
+101-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:83:17-47
+102            android:resource="@array/preloaded_fonts" />
+102-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:84:17-58
 103
-104        <provider
-104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-105            android:name="androidx.startup.InitializationProvider"
-105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-106            android:authorities="kr.ac.duksung.birth.androidx-startup"
-106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-107            android:exported="false" >
-107-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-108            <meta-data
-108-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-109                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-109-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-110                android:value="androidx.startup" />
-110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-111            <meta-data
-111-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kangc\.gradle\caches\transforms-3\590c31374c7ed0df29869038b23ecbe0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
-112                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-112-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kangc\.gradle\caches\transforms-3\590c31374c7ed0df29869038b23ecbe0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
-113                android:value="androidx.startup" />
-113-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kangc\.gradle\caches\transforms-3\590c31374c7ed0df29869038b23ecbe0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
-114            <meta-data
-114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-115                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-115-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-116                android:value="androidx.startup" />
-116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-117        </provider>
-118
-119        <receiver
-119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-120            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-120-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-121            android:directBootAware="false"
-121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-122            android:enabled="true"
-122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-123            android:exported="true"
-123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-124            android:permission="android.permission.DUMP" >
-124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-125            <intent-filter>
-125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-126                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-127            </intent-filter>
-128            <intent-filter>
-128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-129                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-129-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-129-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-130            </intent-filter>
-131            <intent-filter>
-131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-132                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-132-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-132-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-133            </intent-filter>
-134            <intent-filter>
-134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-135                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-135-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-135-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-136            </intent-filter>
-137        </receiver>
-138    </application>
-139
-140</manifest>
+104        <service android:name="kr.ac.duksung.birth.TestService" />
+104-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:86:17-56
+104-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:86:26-53
+105
+106        <provider
+106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+107            android:name="androidx.startup.InitializationProvider"
+107-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+108            android:authorities="kr.ac.duksung.birth.androidx-startup"
+108-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+109            android:exported="false" >
+109-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+110            <meta-data
+110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+111                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+112                android:value="androidx.startup" />
+112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\dea7ab027c3aa9e5e75e3e70e162ef99\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+113            <meta-data
+113-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kangc\.gradle\caches\transforms-3\590c31374c7ed0df29869038b23ecbe0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+114                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+114-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kangc\.gradle\caches\transforms-3\590c31374c7ed0df29869038b23ecbe0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+115                android:value="androidx.startup" />
+115-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kangc\.gradle\caches\transforms-3\590c31374c7ed0df29869038b23ecbe0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+116            <meta-data
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+117                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+118                android:value="androidx.startup" />
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+119        </provider>
+120
+121        <receiver
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+122            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+123            android:directBootAware="false"
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+124            android:enabled="true"
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+125            android:exported="true"
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+126            android:permission="android.permission.DUMP" >
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+127            <intent-filter>
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+128                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+129            </intent-filter>
+130            <intent-filter>
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+131                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+132            </intent-filter>
+133            <intent-filter>
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+134                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+135            </intent-filter>
+136            <intent-filter>
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+137                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kangc\.gradle\caches\transforms-3\f2dd05aececfe25b9d304aa1977cde5b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+138            </intent-filter>
+139        </receiver>
+140    </application>
+141
+142</manifest>

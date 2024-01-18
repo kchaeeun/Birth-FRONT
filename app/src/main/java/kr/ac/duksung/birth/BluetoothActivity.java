@@ -14,6 +14,8 @@ package kr.ac.duksung.birth;
 
 import static android.text.TextUtils.split;
 
+import static com.google.gson.internal.$Gson$Types.arrayOf;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -28,13 +30,16 @@ import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -52,15 +57,16 @@ import android.widget.Toast;
 
 import kr.ac.duksung.birth.Retrofit.NumApiService;
 import kr.ac.duksung.birth.Retrofit.Serial;
-//import kr.ac.duksung.birth.service.RealService;
 import kr.ac.duksung.birth.alarm.CheckAlarmReceiver;
-import kr.ac.duksung.birth.service.RealService;
+//import kr.ac.duksung.birth.service.RealService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import kr.ac.duksung.birth.alarm.AlarmManagerUtil;
+import kr.ac.duksung.birth.alarm.CheckAlarmReceiver;
 
 public class BluetoothActivity extends AppCompatActivity
 {
@@ -97,11 +103,20 @@ public class BluetoothActivity extends AppCompatActivity
         return retrofit;
     }
 
+    private final BroadcastReceiver receiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Integer noAction = intent.getIntExtra("no-action", -1);
+        }
+    };
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
+
+        IntentFilter filter = new IntentFilter("")
 
         Intent intentNum = getIntent();
         numValue = intentNum.getStringExtra("num");
@@ -112,6 +127,13 @@ public class BluetoothActivity extends AppCompatActivity
 
         if (numValue != null && boolValue != -1) {
             makeApiCall(numValue);
+
+        }
+
+        if (boolValue == 1) {
+            // 정적 선언
+            CheckAlarmReceiver.Companion.setupNotificationChannel(this);
+
         }
 
         PowerManager pm = (PowerManager) getApplicationContext().getSystemService(POWER_SERVICE);
@@ -126,13 +148,13 @@ public class BluetoothActivity extends AppCompatActivity
             startActivity(intent);
         }
 
-        if (RealService.serviceIntent==null) {
-            serviceIntent = new Intent(this, RealService.class);
-            startService(serviceIntent);
-        } else {
-            serviceIntent = RealService.serviceIntent;//getInstance().getApplication();
-            Toast.makeText(getApplicationContext(), "already", Toast.LENGTH_LONG).show();
-        }
+//        if (RealService.serviceIntent==null) {
+//            serviceIntent = new Intent(this, RealService.class);
+//            startService(serviceIntent);
+//        } else {
+//            serviceIntent = RealService.serviceIntent;//getInstance().getApplication();
+//            Toast.makeText(getApplicationContext(), "already", Toast.LENGTH_LONG).show();
+//        }
 
         // Bluetooth 권한 확인
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
@@ -413,7 +435,16 @@ public class BluetoothActivity extends AppCompatActivity
 
             if ( isSucess ) {
                 connected(mBluetoothSocket);
+
+                // 호출 조건 추가
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    // 이제 boolValue가 1인 경우에만 알람 매니저 설정
+                    Log.d("alarmManagerUtil", "alarmStart");
+                    AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
+                }
+                checkNotificationPermission();
             }
+
             else{
 
                 isConnectionError = true;
@@ -494,13 +525,6 @@ public class BluetoothActivity extends AppCompatActivity
                                 readBufferPosition = 0;
 
                                 Log.d(TAG, "recv message: " + recvMessage);
-
-                                // 받은 메시지가 0인 겨우 alarmReceiver로 값 전송
-                                if (recvMessage.trim().equals("0")) {
-                                    Intent intentAlarm = new Intent("alarm-action");
-                                    intentAlarm.putExtra("seat-value", 0);
-                                    sendBroadcast(intentAlarm);         // sendBroadcast 메서드를 사용해 receiver로 intent 값 전달
-                                }
                                 publishProgress(recvMessage);
                             }
                             else
@@ -517,6 +541,8 @@ public class BluetoothActivity extends AppCompatActivity
             }
 
         }
+
+
 
         @Override
         protected void onProgressUpdate(String... recvMessage) {
@@ -681,6 +707,19 @@ public class BluetoothActivity extends AppCompatActivity
             }
         }
     }
+
+    private void checkNotificationPermission() {
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS)
+                != PackageManager.PERMISSION_GRANTED) {
+            // 권한이 없을 경우 요청
+            ActivityCompat.requestPermissions(
+                    this,
+                    new String[]{android.Manifest.permission.POST_NOTIFICATIONS},
+                    CheckAlarmReceiver.REQUEST_NOTIFICATION_PERMISSION
+            );
+        }
+    }
+
 
 
 }
