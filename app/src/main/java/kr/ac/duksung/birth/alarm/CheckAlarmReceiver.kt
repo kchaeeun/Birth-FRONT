@@ -5,7 +5,6 @@ import android.app.*
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.graphics.Typeface
 import android.os.Build
 import android.util.Log
 import android.widget.RemoteViews
@@ -18,10 +17,15 @@ class CheckAlarmReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context?, intent: Intent?) {
         context?.let {
-            // 채널 등록
-            setupNotificationChannel(context)
-            // 알림 등록
-            showCustomNotification(context)
+
+            val receivedValue = intent?.getIntExtra("seat-value",-1);
+            if (receivedValue == 0) {
+                // 채널 등록
+                setupNotificationChannel(context)
+                // 알림 등록
+                showCustomNotification(context)
+                // 알림 서비스 시작
+            }
         }
     }
 
@@ -50,10 +54,10 @@ class CheckAlarmReceiver : BroadcastReceiver() {
         Log.d("Alarm setup", "showCustomNotification 호출됨")
 
         val yesIntent = Intent(context, YesActionReceiver::class.java)
-        val yesPendingIntent = PendingIntent.getBroadcast(context, 0, yesIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+        val yesPendingIntent = PendingIntent.getBroadcast(context, 1, yesIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
         val noIntent = Intent(context, NoActionReceiver::class.java)
-        val noPendingIntent = PendingIntent.getBroadcast(context, 0, noIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+        val noPendingIntent = PendingIntent.getBroadcast(context, 2, noIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
         val notificationLayout = RemoteViews(context.packageName, R.layout.notification_layout)
 

@@ -53,6 +53,7 @@ import android.widget.Toast;
 import kr.ac.duksung.birth.Retrofit.NumApiService;
 import kr.ac.duksung.birth.Retrofit.Serial;
 //import kr.ac.duksung.birth.service.RealService;
+import kr.ac.duksung.birth.alarm.CheckAlarmReceiver;
 import kr.ac.duksung.birth.service.RealService;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -80,6 +81,8 @@ public class BluetoothActivity extends AppCompatActivity
     private static final String TAG = "BluetoothClient";
     private String numValue = "sbs";
     private Integer boolValue;
+
+    private Context mcontext;
 
     private static final String BASE_URL = "http://192.168.0.21:8080";
     private static Retrofit retrofit;
@@ -491,6 +494,13 @@ public class BluetoothActivity extends AppCompatActivity
                                 readBufferPosition = 0;
 
                                 Log.d(TAG, "recv message: " + recvMessage);
+
+                                // 받은 메시지가 0인 겨우 alarmReceiver로 값 전송
+                                if (recvMessage.trim().equals("0")) {
+                                    Intent intentAlarm = new Intent("alarm-action");
+                                    intentAlarm.putExtra("seat-value", 0);
+                                    sendBroadcast(intentAlarm);         // sendBroadcast 메서드를 사용해 receiver로 intent 값 전달
+                                }
                                 publishProgress(recvMessage);
                             }
                             else
@@ -510,7 +520,6 @@ public class BluetoothActivity extends AppCompatActivity
 
         @Override
         protected void onProgressUpdate(String... recvMessage) {
-
             mConversationArrayAdapter.insert(mConnectedDeviceName + ": " + recvMessage[0], 0);
         }
 
