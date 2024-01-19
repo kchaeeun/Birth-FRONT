@@ -16,6 +16,8 @@ id editText
 id input_string_edittext
 id input_string_text
 id layout_contents
+id layout_no
+id layout_yes
 id textView
 id textView2
 id textView3

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-pngs-28:\\drawable-xxhdpi\\ic_launcher_background.png"
-    },
-    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\layout_activity_blue.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-34:\\layout\\activity_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-pngs-28:\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-32:\\xml_data_extraction_rules.xml.flat",
