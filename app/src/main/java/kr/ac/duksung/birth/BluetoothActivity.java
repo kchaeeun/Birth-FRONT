@@ -107,7 +107,12 @@ public class BluetoothActivity extends AppCompatActivity
         @Override
         public void onReceive(Context context, Intent intent) {
             Integer noAction = intent.getIntExtra("no-action", -1);
+            // noAction 값이 0인 경우
+            if (noAction != null && noAction == 0) {
+                boolValue = noAction;
+            }
         }
+
     };
 
     @Override
@@ -116,11 +121,9 @@ public class BluetoothActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
 
-        IntentFilter filter = new IntentFilter("")
-
         Intent intentNum = getIntent();
         numValue = intentNum.getStringExtra("num");
-        boolValue = intentNum.getIntExtra("apiCallResult", 0);
+        boolValue = intentNum.getIntExtra("apiCallResult", -1);
 
         Log.d("happy", numValue);
         Log.d("bool", String.valueOf(boolValue));
@@ -130,6 +133,10 @@ public class BluetoothActivity extends AppCompatActivity
 
         }
 
+        IntentFilter filter = new IntentFilter("kr.ac.duksung.birth.DATA_ACTION");
+        registerReceiver(receiver, filter);
+
+        // 알림 설정
         if (boolValue == 1) {
             // 정적 선언
             CheckAlarmReceiver.Companion.setupNotificationChannel(this);
@@ -280,8 +287,10 @@ public class BluetoothActivity extends AppCompatActivity
     private final Runnable mSendRunnable = new Runnable() {
         @Override
         public void run() {
-            // 메시지를 보냅니다
+            // boolValue가 1일 때만 메시지를 보냅니다.
             sendMessage(boolValue);
+
+            Log.d("boolValue", boolValue.toString());
 
             // 일정한 간격 이후에 다음 메시지를 보낼 수 있도록 예약
             mHandler.postDelayed(this, MESSAGE_SEND_INTERVAL);
@@ -463,6 +472,7 @@ public class BluetoothActivity extends AppCompatActivity
         Integer sendMessage = boolValue;
         Log.d("sbs", String.valueOf(sendMessage));
         if (sendMessage != null) {
+            Log.d("write", sendMessage.toString());
             mConnectedTask.write(sendMessage);
         }
     }
