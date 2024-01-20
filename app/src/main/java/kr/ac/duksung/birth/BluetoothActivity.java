@@ -137,11 +137,11 @@ public class BluetoothActivity extends AppCompatActivity
         registerReceiver(receiver, filter);
 
         // 알림 설정
-        if (boolValue == 1) {
-            // 정적 선언
-            CheckAlarmReceiver.Companion.setupNotificationChannel(this);
-
-        }
+//        if (boolValue == 1) {
+//            // 정적 선언
+//            CheckAlarmReceiver.Companion.setupNotificationChannel(this);
+//
+//        }
 
         PowerManager pm = (PowerManager) getApplicationContext().getSystemService(POWER_SERVICE);
         boolean isWhiteListing = false;
@@ -446,12 +446,12 @@ public class BluetoothActivity extends AppCompatActivity
                 connected(mBluetoothSocket);
 
                 // 호출 조건 추가
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    // 이제 boolValue가 1인 경우에만 알람 매니저 설정
-                    Log.d("alarmManagerUtil", "alarmStart");
-                    AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
-                }
-                checkNotificationPermission();
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                    // 이제 boolValue가 1인 경우에만 알람 매니저 설정
+//                    Log.d("alarmManagerUtil", "alarmStart");
+//                    AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
+//                }
+//                checkNotificationPermission();
             }
 
             else{
@@ -479,7 +479,7 @@ public class BluetoothActivity extends AppCompatActivity
 
 
 
-    private class ConnectedTask extends AsyncTask<Void, String, Boolean> {
+    private class ConnectedTask extends AsyncTask<Void, Integer, Boolean> {
 
         private InputStream mInputStream = null;
         private OutputStream mOutputStream = null;
@@ -502,7 +502,7 @@ public class BluetoothActivity extends AppCompatActivity
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            Log.d(TAG, "numValue in ConnectedTask doInBackground: " + numValue);
+            Log.d(TAG, "numValue in ConnectedTas " + numValue);
 
             byte [] readBuffer = new byte[1024];
             int readBufferPosition = 0;
@@ -522,41 +522,80 @@ public class BluetoothActivity extends AppCompatActivity
 
                         mInputStream.read(packetBytes);
 
-                        for(int i=0;i<bytesAvailable;i++) {
+                        int receivedValue = ByteBuffer.wrap(packetBytes).getInt();
+                        Log.d("receivedValue", String.valueOf(receivedValue));
 
-                            byte b = packetBytes[i];
-                            if(b == '\n')
-                            {
-                                byte[] encodedBytes = new byte[readBufferPosition];
-                                System.arraycopy(readBuffer, 0, encodedBytes, 0,
-                                        encodedBytes.length);
-                                String recvMessage = new String(encodedBytes, "UTF-8");
-
-                                readBufferPosition = 0;
-
-                                Log.d(TAG, "recv message: " + recvMessage);
-                                publishProgress(recvMessage);
-                            }
-                            else
-                            {
-                                readBuffer[readBufferPosition++] = b;
-                            }
-                        }
+                        publishProgress(receivedValue);
                     }
                 } catch (IOException e) {
-
                     Log.e(TAG, "disconnected", e);
                     return false;
                 }
+//                        for(int i=0;i<bytesAvailable;i++) {
+//
+//                            byte b = packetBytes[i];
+//                            if(b == '\n')
+//                            {
+//                                byte[] encodedBytes = new byte[readBufferPosition];
+//                                System.arraycopy(readBuffer, 0, encodedBytes, 0,
+//                                        encodedBytes.length);
+//                                String recvMessage = new String(encodedBytes, "UTF-8");
+//
+//                                readBufferPosition = 0;
+//
+//                                Log.d(TAG, "recv message: " + recvMessage);
+//                                publishProgress(recvMessage);
+//                            }
+//                            else
+//                            {
+//                                readBuffer[readBufferPosition++] = b;
+//                            }
+//                        }
+
             }
 
         }
 
+        void write(int msg) {
+            try {
+                // ByteBuffer to convert int to bytes
+                ByteBuffer buffer = ByteBuffer.allocate(Integer.BYTES);
+                buffer.putInt(msg);
+
+                mOutputStream.write(buffer.array());
+                mOutputStream.flush();
+                Log.d(TAG, "Sent message: " + msg);
+            } catch (IOException e) {
+                Log.e(TAG, "Exception during send", e);
+            }
+        }
 
 
         @Override
-        protected void onProgressUpdate(String... recvMessage) {
-            mConversationArrayAdapter.insert(mConnectedDeviceName + ": " + recvMessage[0], 0);
+        protected void onProgressUpdate(Integer... receivedValue) {
+            int value = receivedValue[0];
+            Log.d("vvvv", String.valueOf(value));
+            if (value == 1) {
+                CheckAlarmReceiver.Companion.setupNotificationChannel(BluetoothActivity.this);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    // 이제 boolValue가 1인 경우에만 알람 매니저 설정
+                    Log.d("alarmManagerUtil", "alarmStart");
+                    AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
+                }
+                checkNotificationPermission();
+            } else if (value == 2) {
+                Log.d("boolValue_2","2");
+                CheckAlarmReceiver.Companion.setupNotificationChannel(BluetoothActivity.this);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    // 이제 boolValue가 1인 경우에만 알람 매니저 설정
+                    Log.d("alarmManagerUtil", "alarmStart");
+                    AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
+                }
+                checkNotificationPermission();
+                boolValue = 1;
+            }
+
+
         }
 
         @Override
@@ -623,9 +662,6 @@ public class BluetoothActivity extends AppCompatActivity
         }
 
             Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
-            if (pairedDevices == null) {
-                Log.d("좆댓다1", "ㅋㅋ");
-            }
             Log.d("pariedDevicesALL", "Paired Devices: " + pairedDevices);
             if (pairedDevices != null && !pairedDevices.isEmpty()) {
                 // 원하는 기기 이름을 설정
