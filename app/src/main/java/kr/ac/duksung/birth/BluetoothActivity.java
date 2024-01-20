@@ -108,7 +108,7 @@ public class BluetoothActivity extends AppCompatActivity
         public void onReceive(Context context, Intent intent) {
             Integer noAction = intent.getIntExtra("no-action", -1);
             // noAction 값이 0인 경우
-            if (noAction != null && noAction == 0) {
+            if (noAction != null) {
                 boolValue = noAction;
             }
         }
@@ -282,7 +282,7 @@ public class BluetoothActivity extends AppCompatActivity
 
     // 주기적으로 메시지를 보내기 위한 Handler
     private final Handler mHandler = new Handler();
-    private static final int MESSAGE_SEND_INTERVAL = 1000; // 5 초
+    private static final int MESSAGE_SEND_INTERVAL = 5000; // 5 초
 
     private final Runnable mSendRunnable = new Runnable() {
         @Override
@@ -584,14 +584,6 @@ public class BluetoothActivity extends AppCompatActivity
                 }
                 checkNotificationPermission();
             } else if (value == 2) {
-                Log.d("boolValue_2","2");
-                CheckAlarmReceiver.Companion.setupNotificationChannel(BluetoothActivity.this);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    // 이제 boolValue가 1인 경우에만 알람 매니저 설정
-                    Log.d("alarmManagerUtil", "alarmStart");
-                    AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
-                }
-                checkNotificationPermission();
                 boolValue = 1;
             }
 
