@@ -65,8 +65,8 @@ class CheckAlarmReceiver : BroadcastReceiver() {
 
         val notificationLayout = RemoteViews(context.packageName, R.layout.notification_layout)
 
-        notificationLayout.setOnClickPendingIntent(R.id.tv_yes, yesPendingIntent)
-        notificationLayout.setOnClickPendingIntent(R.id.tv_no, noPendingIntent)
+        notificationLayout.setOnClickPendingIntent(R.id.layout_yes, yesPendingIntent)
+        notificationLayout.setOnClickPendingIntent(R.id.layout_no, noPendingIntent)
 
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)

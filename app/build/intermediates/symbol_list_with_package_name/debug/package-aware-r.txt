@@ -3283,6 +3283,8 @@ id jumpToStart
 id labeled
 id layout
 id layout_contents
+id layout_no
+id layout_yes
 id left
 id leftToRight
 id legacy

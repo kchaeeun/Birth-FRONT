@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import androidx.core.app.NotificationManagerCompat
-import kr.ac.duksung.birth.BluetoothActivity
 
 class NoActionReceiver: BroadcastReceiver() {
     override fun onReceive(p0: Context?, p1: Intent?) {

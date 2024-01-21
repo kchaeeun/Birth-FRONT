@@ -1,17 +1,12 @@
 package kr.ac.duksung.birth
 
-import android.app.Activity
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import kr.ac.duksung.birth.Retrofit.NumApiService
 import kr.ac.duksung.birth.Retrofit.Serial
-import kr.ac.duksung.birth.alarm.AlarmManagerUtil
-import kr.ac.duksung.birth.alarm.CheckAlarmReceiver
 import kr.ac.duksung.birth.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -61,11 +56,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun makeApiCall(serialNumber: String) {
-        val apiService = BluetoothActivity.getRetrofitInstance().create(
+        val apiService = BluetoothActivity.getRetrofitInstance()?.create(
             NumApiService::class.java
         )
-        val call = apiService.getBySerial(serialNumber)
-        call.enqueue(object : Callback<Serial?> {
+        val call = apiService?.getBySerial(serialNumber)
+        call?.enqueue(object : Callback<Serial?> {
             override fun onResponse(call: Call<Serial?>, response: Response<Serial?>) {
                 if (response.isSuccessful) {
                     val serial = response.body()
@@ -75,6 +70,7 @@ class MainActivity : AppCompatActivity() {
                             val intent = Intent(this@MainActivity, BluetoothActivity::class.java)
                             intent.putExtra("num", serialNumber)
                             intent.putExtra("apiCallResult", 1)
+                            Log.d("apiPermission","checkPlease")
                             startActivity(intent)
                         } else {
                             val intent = Intent(this@MainActivity, BluetoothActivity::class.java)
@@ -90,7 +86,7 @@ class MainActivity : AppCompatActivity() {
 
                     // Handle failure by sending "0" to BluetoothActivity
                     val intent = Intent(this@MainActivity, BluetoothActivity::class.java)
-//                    intent.putExtra("num", serialNumber)
+    //                    intent.putExtra("num", serialNumber)
                     intent.putExtra("apiCallResult", 0) // Failure
                     startActivity(intent)
                 }
