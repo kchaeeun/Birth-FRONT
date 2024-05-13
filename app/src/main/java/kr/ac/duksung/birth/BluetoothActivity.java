@@ -12,21 +12,16 @@ package kr.ac.duksung.birth;
  */
 
 
-import static android.text.TextUtils.split;
-
-import static com.google.gson.internal.$Gson$Types.arrayOf;
+import static androidx.core.app.ActivityCompat.startActivityForResult;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 import java.util.Set;
 import java.util.UUID;
 import android.Manifest;
+import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -41,13 +36,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.os.Handler;
 import android.os.PowerManager;
 import android.util.Log;
@@ -55,18 +43,23 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import kr.ac.duksung.birth.Retrofit.NumApiService;
 import kr.ac.duksung.birth.Retrofit.Serial;
 import kr.ac.duksung.birth.alarm.CheckAlarmReceiver;
 //import kr.ac.duksung.birth.service.RealService;
+
+import kr.ac.duksung.birth.alarm.AlarmManagerUtil;
+import kr.ac.duksung.birth.alarm.CheckAlarmReceiver;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-import kr.ac.duksung.birth.alarm.AlarmManagerUtil;
-import kr.ac.duksung.birth.alarm.CheckAlarmReceiver;
 
 public class BluetoothActivity extends AppCompatActivity
 {

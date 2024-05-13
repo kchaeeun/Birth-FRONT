@@ -1,4 +1,0 @@
-#Sun Jan 21 04:25:06 KST 2024
-base.0=D\:\\3-2\\androidProgramming\\CAPSTONE\\Birth\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
