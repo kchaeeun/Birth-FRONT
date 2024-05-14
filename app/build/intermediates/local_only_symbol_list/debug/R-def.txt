@@ -6,6 +6,7 @@ array com_google_android_gms_fonts_certs_prod
 array preloaded_fonts
 color black
 color white
+drawable bg_custom_toast
 drawable btn_check_background
 drawable btn_check_background_15
 drawable ic_alram
@@ -36,6 +37,7 @@ id textView
 id textView2
 id textView3
 id textView4
+id textViewToastMessage
 id tv_no
 id tv_yes
 layout activity_blue
@@ -43,6 +45,7 @@ layout activity_bluetooth
 layout activity_check
 layout activity_main
 layout activity_no_certifi
+layout custom_toast
 layout notification_layout
 mipmap ic_launcher
 mipmap ic_launcher_round

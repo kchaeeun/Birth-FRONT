@@ -2944,6 +2944,7 @@ int drawable abc_textfield_search_material 0x7f080076
 int drawable abc_vector_test 0x7f080077
 int drawable avd_hide_password 0x7f080078
 int drawable avd_show_password 0x7f080079
+int drawable bg_custom_toast 0x7f0800ec
 int drawable btn_check_background 0x7f08007a
 int drawable btn_check_background_15 0x7f08007b
 int drawable btn_checkbox_checked_mtrl 0x7f08007c
@@ -3529,6 +3530,7 @@ int id textView 0x7f0a01cd
 int id textView2 0x7f0a01ce
 int id textView3 0x7f0a01cf
 int id textView4 0x7f0a01d0
+int id textViewToastMessage 0x7f0a0203
 int id text_input_end_icon 0x7f0a01d1
 int id text_input_error_icon 0x7f0a01d2
 int id text_input_start_icon 0x7f0a01d3
@@ -3699,6 +3701,7 @@ int layout activity_check 0x7f0d001e
 int layout activity_main 0x7f0d001f
 int layout activity_no_certifi 0x7f0d0020
 int layout custom_dialog 0x7f0d0021
+int layout custom_toast 0x7f0d0071
 int layout design_bottom_navigation_item 0x7f0d0022
 int layout design_bottom_sheet_dialog 0x7f0d0023
 int layout design_layout_snackbar 0x7f0d0024

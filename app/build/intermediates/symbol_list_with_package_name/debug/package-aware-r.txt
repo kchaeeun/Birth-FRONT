@@ -2945,6 +2945,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_custom_toast
 drawable btn_check_background
 drawable btn_check_background_15
 drawable btn_checkbox_checked_mtrl
@@ -3530,6 +3531,7 @@ id textView
 id textView2
 id textView3
 id textView4
+id textViewToastMessage
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3700,6 +3702,7 @@ layout activity_check
 layout activity_main
 layout activity_no_certifi
 layout custom_dialog
+layout custom_toast
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

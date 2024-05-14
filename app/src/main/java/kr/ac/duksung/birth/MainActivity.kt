@@ -18,6 +18,10 @@ import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private fun showCustomToast(message: String) {
+        CustomToast.showToast(this, message)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -63,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         call?.enqueue(object : Callback<Serial?> {
             override fun onResponse(call: Call<Serial?>, response: Response<Serial?>) {
                 if (response.isSuccessful) {
+                    showCustomToast("임산부 인증이 완료되었습니다.")
                     val serial = response.body()
                     val expireDate = serial?.expireDate
                     if (serial != null && expireDate != null) {
