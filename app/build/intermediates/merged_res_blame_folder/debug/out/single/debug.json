@@ -1,11 +1,11 @@
 [
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/layout_activity_check.xml.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/layout/activity_check.xml"
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/font_pretendard_regular.otf.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/font/pretendard_regular.otf"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-ldpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-ldpi/ic_launcher_background.png"
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/layout_activity_check.xml.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/layout/activity_check.xml"
     },
     {
         "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-mdpi_ic_launcher.webp.flat",
@@ -36,6 +36,18 @@
         "source": "kr.ac.duksung.birth.app-main-34:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/font_font_pretendard.xml.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/font/font_pretendard.xml"
+    },
+    {
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable_ic_birth.png.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/drawable/ic_birth.png"
+    },
+    {
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/font_pretendard_semibold.otf.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/font/pretendard_semibold.otf"
+    },
+    {
         "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "kr.ac.duksung.birth.app-main-34:/mipmap-xhdpi/ic_launcher.webp"
     },
@@ -44,12 +56,12 @@
         "source": "kr.ac.duksung.birth.app-main-34:/layout/activity_main.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/xml_backup_rules.xml.flat",
-        "source": "kr.ac.duksung.birth.app-main-34:/xml/backup_rules.xml"
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable_ic_line.png.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/drawable/ic_line.png"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-xhdpi/ic_launcher_background.png"
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/xml_backup_rules.xml.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/xml/backup_rules.xml"
     },
     {
         "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -60,28 +72,20 @@
         "source": "kr.ac.duksung.birth.app-main-34:/layout/activity_bluetooth.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-xxxhdpi/ic_launcher_background.png"
-    },
-    {
         "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "kr.ac.duksung.birth.app-main-34:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-hdpi/ic_launcher_background.png"
-    },
-    {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-mdpi/ic_launcher_background.png"
-    },
-    {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-anydpi-v21_ic_launcher_background.xml.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-anydpi-v21/ic_launcher_background.xml"
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/font_pretendard_extrabold.otf.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/font/pretendard_extrabold.otf"
     },
     {
         "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "kr.ac.duksung.birth.app-main-34:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable_btn_check_background_15.xml.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/drawable/btn_check_background_15.xml"
     },
     {
         "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-mdpi_ic_launcher_round.webp.flat",
@@ -96,8 +100,8 @@
         "source": "kr.ac.duksung.birth.app-main-34:/font/inter_semibold.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-28:/drawable-xxhdpi/ic_launcher_background.png"
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/font_ssflowerroadregular.otf.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/font/ssflowerroadregular.otf"
     },
     {
         "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -108,8 +112,20 @@
         "source": "kr.ac.duksung.birth.app-main-34:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable_btn_check_background.xml.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/drawable/btn_check_background.xml"
+    },
+    {
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable_ic_launcher_background.xml.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/drawable/ic_launcher_background.xml"
+    },
+    {
         "merged": "kr.ac.duksung.birth.app-merged_res-32:/drawable_ic_alram.png.flat",
         "source": "kr.ac.duksung.birth.app-main-34:/drawable/ic_alram.png"
+    },
+    {
+        "merged": "kr.ac.duksung.birth.app-merged_res-32:/layout_activity_no_certifi.xml.flat",
+        "source": "kr.ac.duksung.birth.app-main-34:/layout/activity_no_certifi.xml"
     },
     {
         "merged": "kr.ac.duksung.birth.app-merged_res-32:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",

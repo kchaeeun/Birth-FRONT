@@ -20,7 +20,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Birth</string>
-    <style name="Base.Theme.Birth" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Birth" parent="Theme.Material3.DayNight">
         
         
     </style>

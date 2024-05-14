@@ -4,11 +4,11 @@ package kr.ac.duksung.birth.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -22,16 +22,16 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button button;
+  public final AppCompatButton button;
 
   @NonNull
   public final EditText editText;
 
   @NonNull
-  public final TextView textView;
+  public final ImageView textView;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button button,
-      @NonNull EditText editText, @NonNull TextView textView) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull AppCompatButton button,
+      @NonNull EditText editText, @NonNull ImageView textView) {
     this.rootView = rootView;
     this.button = button;
     this.editText = editText;
@@ -66,7 +66,7 @@ public final class ActivityMainBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.button;
-      Button button = ViewBindings.findChildViewById(rootView, id);
+      AppCompatButton button = ViewBindings.findChildViewById(rootView, id);
       if (button == null) {
         break missingId;
       }
@@ -78,7 +78,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      ImageView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
         break missingId;
       }

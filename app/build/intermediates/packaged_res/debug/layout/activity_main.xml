@@ -6,45 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Birth"
-            android:textFontWeight="500"
+            android:layout_width="122dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_birth"
             android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/inter_semibold"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.209"
-            android:fontFamily="@font/inter_semibold" />
+            android:layout_marginTop="160dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="96dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="67dp"
             android:text="확인"
+            android:elevation="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_check_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText"
-            android:fontFamily="@font/inter_semibold" />
+            android:fontFamily="@font/pretendard_semibold" />
 
     <EditText
             android:id="@+id/editText"
             android:maxLines="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="137dp"
             android:maxLength="12"
+            android:textColorHint="#545454"
+            android:backgroundTint="#FE7968"
             android:lines="1"
-            android:hint="시리얼 넘버를 입력해주세요"
+            android:textSize="18sp"
+            android:background="@android:color/transparent"
+            android:hint="시리얼 넘버를 입력해주세요."
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:fontFamily="@font/inter_semibold" />
+            android:fontFamily="@font/pretendard_regular" />
+
+    <View
+            android:layout_width="235dp"
+            android:layout_height="2dp"
+            android:background="@drawable/ic_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            android:layout_marginTop="6dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
