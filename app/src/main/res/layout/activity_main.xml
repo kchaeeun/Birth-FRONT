@@ -17,7 +17,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:fontFamily="@font/inter_semibold"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="184dp" />
+            android:layout_marginTop="160dp" />
 
     <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"

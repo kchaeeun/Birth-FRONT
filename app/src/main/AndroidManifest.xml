@@ -15,7 +15,6 @@
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-
     <application
             android:name=".BluetoothApplication"
             android:allowBackup="true"
@@ -28,6 +27,10 @@
             android:theme="@style/Theme.Birth"
             android:usesCleartextTraffic="true"
             tools:targetApi="31">
+        <activity
+                android:name=".NoCertifiActivity"
+                android:exported="false" />
+
         <service
                 android:name=".service.BluetoothService"
                 android:enabled="true"
@@ -43,29 +46,31 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".alarm.CheckAlarmReceiver"
+        <receiver
+                android:name=".alarm.CheckAlarmReceiver"
                 android:exported="false">
             <intent-filter>
-<!--                <action android:name="alarm-action"/>-->
-                <action android:name="kr.ac.duksung.birth.YES_ACTION"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name=".alarm.YesActionReceiver"
-                android:exported="false">
-            <intent-filter>
-                <action android:name="kr.ac.duksung.birth.YES_ACTION"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name=".alarm.NoActionReceiver"
-                android:exported="false">
-            <intent-filter>
-                <action android:name="kr.ac.duksung.birth.NO_ACTION"/>
-            </intent-filter>
-        </receiver>
 
-<!--        <activity-->
-<!--                android:name=".CheckActivity"-->
-<!--                android:exported="false" />-->
+                <!-- <action android:name="alarm-action"/> -->
+                <action android:name="kr.ac.duksung.birth.YES_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver
+                android:name=".alarm.YesActionReceiver"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="kr.ac.duksung.birth.YES_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver
+                android:name=".alarm.NoActionReceiver"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="kr.ac.duksung.birth.NO_ACTION" />
+            </intent-filter>
+        </receiver> <!-- <activity -->
+        <!-- android:name=".CheckActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
                 android:name=".MainActivity"
                 android:exported="true">
@@ -83,7 +88,7 @@
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts" />
 
-                <service android:name=".TestService" />
+        <service android:name=".TestService" />
     </application>
 
 </manifest>
