@@ -78,6 +78,22 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+            android:id="@+id/tv_no_certifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인증된 정보가 없습니다.\n 인증 후 Birth를 이용해주세요"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="15sp"
+            android:textColor="#1e1e1e"
+            android:lineSpacingExtra="-1dp"
+            android:visibility="gone"
+            android:fontFamily="@font/pretendard_semibold"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:textAlignment="center"
+            android:layout_marginTop="125dp" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -97,9 +113,11 @@
                 android:fontFamily="@font/pretendard_regular"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
+                android:visibility="gone"
                 android:id="@+id/input_string_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -141,7 +159,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appCompatButton"
             app:layout_constraintHorizontal_bias="0.504"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:id="@+id/appCompatButton2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

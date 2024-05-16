@@ -4,7 +4,8 @@ ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest
 INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:2:1-94:12
 INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:2:1-94:12
 INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:2:1-94:12
-MERGED from [androidx.databinding:viewbinding:8.1.3] C:\Users\kangc\.gradle\caches\transforms-3\fa1a3ef9f9e875fbb63deead811bf8d1\transformed\jetified-viewbinding-8.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.databinding:databinding-runtime:8.4.0] C:\Users\kangc\.gradle\caches\transforms-3\9770d97d6598000d604425425fd05de6\transformed\databinding-runtime-8.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.databinding:viewbinding:8.4.0] C:\Users\kangc\.gradle\caches\transforms-3\bc65976c73f1b68e0af80b425acc4448\transformed\jetified-viewbinding-8.4.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\kangc\.gradle\caches\transforms-3\d0dc134a979f1bbea9a314d52c820920\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\kangc\.gradle\caches\transforms-3\7b0ed5ec5a99fb34b6558250c2aa2155\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\kangc\.gradle\caches\transforms-3\aa625f9285859e10f66556e10a426a84\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -257,8 +258,10 @@ uses-sdk
 INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml
 INJECTED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml
-MERGED from [androidx.databinding:viewbinding:8.1.3] C:\Users\kangc\.gradle\caches\transforms-3\fa1a3ef9f9e875fbb63deead811bf8d1\transformed\jetified-viewbinding-8.1.3\AndroidManifest.xml:5:5-44
-MERGED from [androidx.databinding:viewbinding:8.1.3] C:\Users\kangc\.gradle\caches\transforms-3\fa1a3ef9f9e875fbb63deead811bf8d1\transformed\jetified-viewbinding-8.1.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-runtime:8.4.0] C:\Users\kangc\.gradle\caches\transforms-3\9770d97d6598000d604425425fd05de6\transformed\databinding-runtime-8.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-runtime:8.4.0] C:\Users\kangc\.gradle\caches\transforms-3\9770d97d6598000d604425425fd05de6\transformed\databinding-runtime-8.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.4.0] C:\Users\kangc\.gradle\caches\transforms-3\bc65976c73f1b68e0af80b425acc4448\transformed\jetified-viewbinding-8.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.4.0] C:\Users\kangc\.gradle\caches\transforms-3\bc65976c73f1b68e0af80b425acc4448\transformed\jetified-viewbinding-8.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\kangc\.gradle\caches\transforms-3\d0dc134a979f1bbea9a314d52c820920\transformed\material-1.10.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\kangc\.gradle\caches\transforms-3\d0dc134a979f1bbea9a314d52c820920\transformed\material-1.10.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\kangc\.gradle\caches\transforms-3\7b0ed5ec5a99fb34b6558250c2aa2155\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41

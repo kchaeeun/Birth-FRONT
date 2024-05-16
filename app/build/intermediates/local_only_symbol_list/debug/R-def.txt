@@ -26,6 +26,7 @@ id certi_text
 id connection_status_textview
 id constraintLayout
 id constraintLayout2
+id custom_layout
 id editText
 id input_string_edittext
 id input_string_text

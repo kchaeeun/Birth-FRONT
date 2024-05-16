@@ -1,8 +1,11 @@
 package kr.ac.duksung.birth
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kr.ac.duksung.birth.Retrofit.NumApiService
@@ -18,10 +21,23 @@ import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private fun showCustomToast(message: String) {
-        CustomToast.showToast(this, message)
-    }
 
+
+//    private fun Context.customToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
+//        val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+//        val layout = inflater.inflate(R.layout.custom_toast, findViewById(R.id.custom_layout))
+//
+//        val textView = layout.findViewById<TextView>(R.id.textViewToastMessage)
+//        textView.text = message
+//
+//        val toast = Toast(this)
+//        toast.duration = duration
+//        toast.view = layout
+//        toast.show()
+//        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+//
+//        Log.d("text", message)
+//    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -37,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             val num = binding.editText.text.toString()  // edittext 값을 가져올 때는 text.toString()을 사용해준다.
             makeApiCall(num)
             Log.d("num",num)
-
+//            Toast.makeText(this, "rne", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -67,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         call?.enqueue(object : Callback<Serial?> {
             override fun onResponse(call: Call<Serial?>, response: Response<Serial?>) {
                 if (response.isSuccessful) {
-                    showCustomToast("임산부 인증이 완료되었습니다.")
+                    Toast.makeText(this@MainActivity, "임산부 인증이 완료되었습니다.", Toast.LENGTH_LONG).show()
                     val serial = response.body()
                     val expireDate = serial?.expireDate
                     if (serial != null && expireDate != null) {
@@ -98,11 +114,12 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Serial?>, t: Throwable) {
-                Toast.makeText(
-                    this@MainActivity,
-                    "임산부 인증에 실패하였습니다.",
-                    Toast.LENGTH_LONG
-                ).show()
+//                showCustomToast("임산부 인증이 완료되었습니다.")
+//                Toast.makeText(
+//                    this@MainActivity,
+//                    "임산부 인증에 실패하였습니다.",
+//                    Toast.LENGTH_LONG
+//                ).show()
                 Log.e("Retrofit Error", "Failure: " + t.message)
 
                 // Handle failure by sending "0" to BluetoothActivity

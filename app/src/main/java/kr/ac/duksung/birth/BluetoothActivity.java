@@ -39,6 +39,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -71,6 +72,9 @@ public class BluetoothActivity extends AppCompatActivity
     private TextView mConnectionStatus;
     private TextView mInputEditText;
     private TextView mName;
+    private TextView noCertifi;
+    private TextView certifiText;
+
 
     ConnectedTask mConnectedTask = null;
     static BluetoothAdapter mBluetoothAdapter;
@@ -83,7 +87,7 @@ public class BluetoothActivity extends AppCompatActivity
 
     private Context mcontext;
 
-    private static final String BASE_URL = "http://172.20.10.2:8080";
+    private static final String BASE_URL = "http://192.168.71.144:8080";
     private static Retrofit retrofit;
 
     public static Retrofit getRetrofitInstance() {
@@ -184,6 +188,8 @@ public class BluetoothActivity extends AppCompatActivity
         mConnectionStatus = (TextView)findViewById(R.id.connection_status_textview);
         mInputEditText = (TextView)findViewById(R.id.input_string_text);
         mName = (TextView)findViewById(R.id.textView2);
+        noCertifi = (TextView)findViewById(R.id.tv_no_certifi);
+        certifiText = (TextView)findViewById(R.id.certi_text);
 //        ListView mMessageListview = (ListView) findViewById(R.id.message_listview);
 
 
@@ -329,23 +335,26 @@ public class BluetoothActivity extends AppCompatActivity
                         runOnUiThread(() -> {
                             if (expireDate != null) {
                                 if (boolValue == 1) {
-                                    mName.setText(name + " 임산부님 환영합니다.");
+                                    mName.setText(name);
                                     mInputEditText.append(expireDate.toString());
                                 } else {
-                                    mName.setText("임산부 시리얼 넘버 만료 기간이 종료되었습니다.");
+                                    certifiText.setText("인증이 만료되었습니다.");
                                     mInputEditText.append(expireDate.toString());
                                     Toast.makeText(BluetoothActivity.this,"임산부 인증에 실패하였습니다.", Toast.LENGTH_LONG).show();
                                 }
                             } else {
                                 mName.setText("임산부가 아닙니다.");
                                 mInputEditText.setText("");
+                                noCertifi.setVisibility(View.VISIBLE);
+
                                 Log.e("Error", "expireDate is done");
                             }
                         });
                     } else {
                         runOnUiThread(() -> {
-                            mName.setText("임산부가 아닙니다.");
+                            mName.setText("");
                             mInputEditText.setText("");
+
                             Log.e("Error", "expireDate is done");
 
                             Toast.makeText(BluetoothActivity.this,"임산부 인증에 실패하였습니다.", Toast.LENGTH_LONG).show();

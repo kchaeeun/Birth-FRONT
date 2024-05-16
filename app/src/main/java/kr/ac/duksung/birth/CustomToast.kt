@@ -1,23 +1,27 @@
 package kr.ac.duksung.birth
 
-// CustomToast.kt
 import android.content.Context
+import android.content.res.Resources
+import android.view.Gravity
 import android.view.LayoutInflater
-import android.widget.TextView
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import kr.ac.duksung.birth.databinding.CustomToastBinding
 
 object CustomToast {
-    fun showToast(context: Context, message: String) {
-        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        var view = inflater.inflate(R.layout.custom_toast, null)
+    fun showToast(context: Context, message: String): Toast? {
+        val inflater = LayoutInflater.from(context)
+        val binding: CustomToastBinding =
+            DataBindingUtil.inflate(inflater, R.layout.custom_toast, null, false)
 
-        val textViewMessage = view.findViewById<TextView>(R.id.textViewToastMessage)
-        textViewMessage.text = message
+        binding.textViewToastMessage.text = message
 
-        with(Toast(context)) {
-            duration = Toast.LENGTH_SHORT
-            view = view
-            show()
+        return Toast(context).apply {
+            setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 16.toPx())
+            duration = Toast.LENGTH_LONG
+            view = binding.root
         }
     }
+
+    private fun Int.toPx(): Int = (this * Resources.getSystem().displayMetrics.density).toInt()
 }

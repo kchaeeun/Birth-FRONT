@@ -3207,7 +3207,9 @@ int id cradle 0x7f0a008a
 int id currentState 0x7f0a008b
 int id custom 0x7f0a008c
 int id customPanel 0x7f0a008d
+int id custom_layout 0x7f0a0205
 int id cut 0x7f0a008e
+int id dataBinding 0x7f0a0204
 int id date_picker_actions 0x7f0a008f
 int id decelerate 0x7f0a0090
 int id decelerateAndComplete 0x7f0a0091
