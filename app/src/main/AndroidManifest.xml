@@ -27,11 +27,24 @@
             android:theme="@style/Theme.Birth"
             android:usesCleartextTraffic="true"
             tools:targetApi="31">
+<!--        <activity-->
+<!--                android:name=".SeatActivity"-->
+<!--                android:exported="false"-->
+<!--                android:label="@string/title_activity_seat"-->
+<!--                android:theme="@style/Theme.Birth" />-->
         <activity
-                android:name=".SplashActivity"
+                android:name=".BaseActivity"
+                android:exported="false"
+                android:label="@string/title_activity_base"
+                android:theme="@style/Theme.Birth" />
+        <activity
+                android:name=".MainActivity"
                 android:exported="false" />
         <activity
                 android:name=".NoCertifiActivity"
+                android:exported="false" />
+        <activity
+                android:name=".SirenActivity"
                 android:exported="false" />
 
         <service
@@ -75,7 +88,7 @@
         <!-- android:name=".CheckActivity" -->
         <!-- android:exported="false" /> -->
         <activity
-                android:name=".MainActivity"
+                android:name=".SeatActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -83,6 +96,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SplashActivity"/>
         <activity
                 android:name=".BluetoothActivity"
                 android:exported="true" />

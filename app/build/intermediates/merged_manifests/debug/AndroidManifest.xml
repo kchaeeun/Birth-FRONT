@@ -42,8 +42,25 @@
         android:testOnly="true"
         android:theme="@style/Theme.Birth"
         android:usesCleartextTraffic="true" >
+
+        <!-- <activity -->
+        <!-- android:name=".SeatActivity" -->
+        <!-- android:exported="false" -->
+        <!-- android:label="@string/title_activity_seat" -->
+        <!-- android:theme="@style/Theme.Birth" /> -->
+        <activity
+            android:name="kr.ac.duksung.birth.BaseActivity"
+            android:exported="false"
+            android:label="@string/title_activity_base"
+            android:theme="@style/Theme.Birth" />
+        <activity
+            android:name="kr.ac.duksung.birth.MainActivity"
+            android:exported="false" />
         <activity
             android:name="kr.ac.duksung.birth.NoCertifiActivity"
+            android:exported="false" />
+        <activity
+            android:name="kr.ac.duksung.birth.SirenActivity"
             android:exported="false" />
 
         <service
@@ -87,7 +104,7 @@
         <!-- android:name=".CheckActivity" -->
         <!-- android:exported="false" /> -->
         <activity
-            android:name="kr.ac.duksung.birth.MainActivity"
+            android:name="kr.ac.duksung.birth.SeatActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -95,6 +112,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="kr.ac.duksung.birth.SplashActivity" />
         <activity
             android:name="kr.ac.duksung.birth.BluetoothActivity"
             android:exported="true" />
@@ -119,6 +137,13 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"

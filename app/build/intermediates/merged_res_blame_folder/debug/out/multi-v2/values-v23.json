@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "kr.ac.duksung.birth.app-mergeDebugResources-31:/values-v23/values-v23.xml",
+            "outputFile": "kr.ac.duksung.birth.app-mergeDebugResources-47:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "C:\\Users\\kangc\\.gradle\\caches\\transforms-3\\d0dc134a979f1bbea9a314d52c820920\\transformed\\material-1.10.0\\res\\values-v23\\values-v23.xml",
@@ -14,12 +14,12 @@
                         "endOffsets": "266,408,569,779,1099,1336,1543,1750,1953,2285,2487,2752,3025"
                     },
                     "to": {
-                        "startLines": "53,56,60,64,67,72,76,79,82,85,90,93,97",
+                        "startLines": "59,62,66,70,73,78,82,85,88,91,96,99,103",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3382,3598,3740,3901,4111,4431,4668,4875,5082,5285,5617,5819,6084",
-                        "endLines": "55,59,63,66,71,75,78,81,84,89,92,96,100",
+                        "startOffsets": "3697,3913,4055,4216,4426,4746,4983,5190,5397,5600,5932,6134,6399",
+                        "endLines": "61,65,69,72,77,81,84,87,90,95,98,102,106",
                         "endColumns": "10,10,10,10,10,10,10,10,10,10,10,10,10",
-                        "endOffsets": "3593,3735,3896,4106,4426,4663,4870,5077,5280,5612,5814,6079,6352"
+                        "endOffsets": "3908,4050,4211,4421,4741,4978,5185,5392,5595,5927,6129,6394,6667"
                     }
                 },
                 {
@@ -31,6 +31,25 @@
                         "endLines": "2,3,4,5,19,33,34,35,38,42,43,44,45,49",
                         "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
                         "endOffsets": "185,320,395,482,1220,1970,2089,2216,2438,2662,2777,2884,2997,3227"
+                    }
+                },
+                {
+                    "source": "D:\\3-2\\androidProgramming\\CAPSTONE\\Birth\\app\\src\\main\\res\\values-v23\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "64",
+                        "endLines": "7",
+                        "endColumns": "12",
+                        "endOffsets": "424"
+                    },
+                    "to": {
+                        "startLines": "53",
+                        "startColumns": "4",
+                        "startOffsets": "3382",
+                        "endLines": "58",
+                        "endColumns": "12",
+                        "endOffsets": "3692"
                     }
                 },
                 {

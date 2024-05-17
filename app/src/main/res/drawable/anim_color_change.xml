@@ -1,0 +1,9 @@
+<!-- anim_color_change.xml -->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+        android:oneshot="false">
+    <item android:drawable="@drawable/circle_1" android:duration="500"/>
+    <item android:drawable="@drawable/circle_2" android:duration="500"/>
+    <item android:drawable="@drawable/circle_3" android:duration="500"/>
+    <item android:drawable="@drawable/circle_4" android:duration="500"/>
+    <item android:drawable="@drawable/circle_5" android:duration="500"/>
+</animation-list>

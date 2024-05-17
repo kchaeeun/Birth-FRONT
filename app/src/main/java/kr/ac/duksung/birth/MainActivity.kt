@@ -1,13 +1,9 @@
 package kr.ac.duksung.birth
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import android.view.View
 import kr.ac.duksung.birth.Retrofit.NumApiService
 import kr.ac.duksung.birth.Retrofit.Serial
 import kr.ac.duksung.birth.databinding.ActivityMainBinding
@@ -19,7 +15,7 @@ import java.util.Calendar
 import java.util.Locale
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     private lateinit var binding: ActivityMainBinding
 
 
@@ -48,11 +44,21 @@ class MainActivity : AppCompatActivity() {
 //
 //        // 알림 권한
 //        checkNotificationPermission()
+//        setupToolbarButton()
+
+        binding.include.imageButton2.setOnClickListener {
+            Log.d("버튼 눌림 확인", "눌림")
+            val intent = Intent(this, SirenActivity::class.java)
+            startActivity(intent)
+        }
+        binding.include.imageButton.visibility = View.INVISIBLE
 
         binding.button.setOnClickListener {
-            val num = binding.editText.text.toString()  // edittext 값을 가져올 때는 text.toString()을 사용해준다.
-            makeApiCall(num)
-            Log.d("num",num)
+            val intent = Intent(this, SeatActivity::class.java)
+            startActivity(intent)
+//            val num = binding.editText.text.toString()  // edittext 값을 가져올 때는 text.toString()을 사용해준다.
+//            makeApiCall(num)
+//            Log.d("num",num)
 //            Toast.makeText(this, "rne", Toast.LENGTH_SHORT).show()
         }
     }
@@ -83,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         call?.enqueue(object : Callback<Serial?> {
             override fun onResponse(call: Call<Serial?>, response: Response<Serial?>) {
                 if (response.isSuccessful) {
-                    Toast.makeText(this@MainActivity, "임산부 인증이 완료되었습니다.", Toast.LENGTH_LONG).show()
+//                    Toast.makeText(this@MainActivity, "임산부 인증이 완료되었습니다.", Toast.LENGTH_LONG).show()
                     val serial = response.body()
                     val expireDate = serial?.expireDate
                     if (serial != null && expireDate != null) {

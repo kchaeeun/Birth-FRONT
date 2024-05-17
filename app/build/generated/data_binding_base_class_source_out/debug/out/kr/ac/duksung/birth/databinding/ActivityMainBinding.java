@@ -28,13 +28,18 @@ public final class ActivityMainBinding implements ViewBinding {
   public final EditText editText;
 
   @NonNull
+  public final ActivityToolbarBinding include;
+
+  @NonNull
   public final ImageView textView;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull AppCompatButton button,
-      @NonNull EditText editText, @NonNull ImageView textView) {
+      @NonNull EditText editText, @NonNull ActivityToolbarBinding include,
+      @NonNull ImageView textView) {
     this.rootView = rootView;
     this.button = button;
     this.editText = editText;
+    this.include = include;
     this.textView = textView;
   }
 
@@ -77,13 +82,21 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.include;
+      View include = ViewBindings.findChildViewById(rootView, id);
+      if (include == null) {
+        break missingId;
+      }
+      ActivityToolbarBinding binding_include = ActivityToolbarBinding.bind(include);
+
       id = R.id.textView;
       ImageView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, button, editText, textView);
+      return new ActivityMainBinding((ConstraintLayout) rootView, button, editText, binding_include,
+          textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

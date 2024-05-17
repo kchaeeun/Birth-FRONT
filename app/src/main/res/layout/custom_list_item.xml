@@ -1,0 +1,30 @@
+<!-- custom_list_item.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="vertical">
+
+    <!-- 리스트 아이템 내용 -->
+    <TextView
+            android:id="@+id/textView"
+            android:textColor="#1e1e1e"
+            android:textSize="18sp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="리스트 아이템 내용"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="1dp" />
+
+    <!-- 선 추가 -->
+    <View
+            android:layout_width="251dp"
+            android:layout_height="1dp"
+            android:background="#1e1e1e"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

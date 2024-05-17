@@ -41,13 +41,18 @@ import android.os.PowerManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import kr.ac.duksung.birth.Retrofit.NumApiService;
 import kr.ac.duksung.birth.Retrofit.Serial;
@@ -62,7 +67,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class BluetoothActivity extends AppCompatActivity
+public class BluetoothActivity extends BaseActivity
 {
     private Intent serviceIntent;
     private static final int REQUEST_ENABLE_BLUETOOTH = 1;
@@ -74,7 +79,7 @@ public class BluetoothActivity extends AppCompatActivity
     private TextView mName;
     private TextView noCertifi;
     private TextView certifiText;
-
+    private ConstraintLayout layout;
 
     ConnectedTask mConnectedTask = null;
     static BluetoothAdapter mBluetoothAdapter;
@@ -86,8 +91,11 @@ public class BluetoothActivity extends AppCompatActivity
     private Integer boolValue;
 
     private Context mcontext;
+    private AppCompatButton btnSeat;
+    private AppCompatButton btnCerti;
 
-    private static final String BASE_URL = "http://192.168.71.144:8080";
+
+    private static final String BASE_URL = "http://192.168.0.21:8080";
     private static Retrofit retrofit;
 
     public static Retrofit getRetrofitInstance() {
@@ -127,7 +135,6 @@ public class BluetoothActivity extends AppCompatActivity
 
         if (numValue != null && boolValue != -1) {
             makeApiCall(numValue);
-
         }
 
         IntentFilter filter = new IntentFilter("kr.ac.duksung.birth.DATA_ACTION");
@@ -190,7 +197,34 @@ public class BluetoothActivity extends AppCompatActivity
         mName = (TextView)findViewById(R.id.textView2);
         noCertifi = (TextView)findViewById(R.id.tv_no_certifi);
         certifiText = (TextView)findViewById(R.id.certi_text);
-//        ListView mMessageListview = (ListView) findViewById(R.id.message_listview);
+        layout = (ConstraintLayout)findViewById(R.id.constraintLayout2);
+        btnSeat = (AppCompatButton)findViewById(R.id.appCompatButton2);
+        btnCerti = (AppCompatButton)findViewById(R.id.appCompatButton);
+
+        //        ListView mMessageListview = (ListView) findViewById(R.id.message_listview);
+        // include된 레이아웃의 루트 뷰를 찾습니다.
+        View includeView = findViewById(R.id.include);
+
+        // include된 레이아웃 내의 이미지 버튼에 접근합니다.
+        ImageButton imageButton = includeView.findViewById(R.id.imageButton);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                Log.d("버튼 눌림 확인", "눌림");
+            }
+        });
+
+        ImageButton imageButton2 = includeView.findViewById(R.id.imageButton2);
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("버튼 눌림 확인", "눌림");
+                Intent intent = new Intent(getApplicationContext(), SirenActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
@@ -335,25 +369,30 @@ public class BluetoothActivity extends AppCompatActivity
                         runOnUiThread(() -> {
                             if (expireDate != null) {
                                 if (boolValue == 1) {
+                                    mName.setVisibility(View.VISIBLE);
                                     mName.setText(name);
-                                    mInputEditText.append(expireDate.toString());
-                                } else {
+                                    Log.d("이름확인",name);
+                                    mInputEditText.setVisibility(View.VISIBLE);
+                                    mInputEditText.setText(expireDate.toString());
+                                    certifiText.setVisibility(View.VISIBLE);
+                                    layout.setVisibility(View.VISIBLE);
+                                    noCertifi.setVisibility(View.GONE);
+                                    showPairedDevicesListDialog();
+                                } else if (boolValue == 0) {
+                                    mName.setText(name);
+                                    layout.setVisibility(View.VISIBLE);
+                                    noCertifi.setVisibility(View.GONE);
+                                    certifiText.setVisibility(View.VISIBLE);
                                     certifiText.setText("인증이 만료되었습니다.");
-                                    mInputEditText.append(expireDate.toString());
-                                    Toast.makeText(BluetoothActivity.this,"임산부 인증에 실패하였습니다.", Toast.LENGTH_LONG).show();
+
+                                    Toast.makeText(BluetoothActivity.this, "임산부 인증에 실패하였습니다.", Toast.LENGTH_LONG).show();
                                 }
                             } else {
-                                mName.setText("임산부가 아닙니다.");
-                                mInputEditText.setText("");
-                                noCertifi.setVisibility(View.VISIBLE);
-
                                 Log.e("Error", "expireDate is done");
                             }
                         });
                     } else {
                         runOnUiThread(() -> {
-                            mName.setText("");
-                            mInputEditText.setText("");
 
                             Log.e("Error", "expireDate is done");
 
@@ -374,7 +413,7 @@ public class BluetoothActivity extends AppCompatActivity
         });
     }
 
-    private class ConnectTask extends AsyncTask<Void, Void, Boolean> {
+    public class ConnectTask extends AsyncTask<Void, Void, Boolean> {
 
         private BluetoothSocket mBluetoothSocket = null;
         private BluetoothDevice mBluetoothDevice = null;
@@ -407,7 +446,7 @@ public class BluetoothActivity extends AppCompatActivity
 
 
         @Override
-        protected Boolean doInBackground(Void... params) {
+        public Boolean doInBackground(Void... params) {
             Log.d(TAG, "numValue in ConnectTask doInBackground: " + numValue);
 
             if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
@@ -677,47 +716,69 @@ public class BluetoothActivity extends AppCompatActivity
         }
     }
 
+    public void showPairedDevicesListDialog() {
 
-
-    public void showPairedDevicesListDialog()
-    {
-
-        if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
             // 권한이 없는 경우 권한 요청
-            ActivityCompat.requestPermissions(BluetoothActivity.this, new String[]{Manifest.permission.BLUETOOTH}, REQUEST_BLUETOOTH_PERMISSION);
-        } else {
-            // 권한이 이미 허용된 경우 블루투스 작업 수행
-            // 여기에 블루투스 관련 코드 추가
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BLUETOOTH}, REQUEST_BLUETOOTH_PERMISSION);
+            return; // 권한 요청 후에는 함수 종료
         }
+
         Set<BluetoothDevice> devices = mBluetoothAdapter.getBondedDevices();
         final BluetoothDevice[] pairedDevices = devices.toArray(new BluetoothDevice[0]);
 
-        if ( pairedDevices.length == 0 ){
-            showQuitDialog( "No devices have been paired.\n"
-                    +"You must pair it with another device.");
+        if (pairedDevices.length == 0) {
+            showQuitDialog("No devices have been paired.\n" + "You must pair it with another device.");
             return;
         }
 
-        String[] items;
-        items = new String[pairedDevices.length];
-        for (int i=0;i<pairedDevices.length;i++) {
-            items[i] = pairedDevices[i].getName();
-        }
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("앉은 자리를 선택하세요");
-        builder.setCancelable(false);
-        builder.setItems(items, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-
-                ConnectTask task = new ConnectTask(pairedDevices[which]);
-                task.execute();
-            }
-        });
-        builder.create().show();
+        CustomDeviceListDialog dialog = new CustomDeviceListDialog(this, pairedDevices);
+        dialog.show();
     }
+
+
+//    public void showPairedDevicesListDialog()
+//    {
+//
+//        if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
+//            // 권한이 없는 경우 권한 요청
+//            ActivityCompat.requestPermissions(BluetoothActivity.this, new String[]{Manifest.permission.BLUETOOTH}, REQUEST_BLUETOOTH_PERMISSION);
+//        } else {
+//            // 권한이 이미 허용된 경우 블루투스 작업 수행
+//            // 여기에 블루투스 관련 코드 추가
+//        }
+//        Set<BluetoothDevice> devices = mBluetoothAdapter.getBondedDevices();
+//        final BluetoothDevice[] pairedDevices = devices.toArray(new BluetoothDevice[0]);
+//
+//        if ( pairedDevices.length == 0 ){
+//            showQuitDialog( "No devices have been paired.\n"
+//                    +"You must pair it with another device.");
+//            return;
+//        }
+//
+//        CustomDeviceListDialog dialog = new CustomDeviceListDialog(this, pairedDevices);
+//        dialog.show();
+
+//        String[] items;
+//        items = new String[pairedDevices.length];
+//        for (int i=0;i<pairedDevices.length;i++) {
+//            items[i] = pairedDevices[i].getName();
+//        }
+//
+//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//        builder.setTitle("앉은 자리를 선택하세요");
+//        builder.setCancelable(false);
+//        builder.setItems(items, new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.dismiss();
+//
+//                ConnectTask task = new ConnectTask(pairedDevices[which]);
+//                task.execute();
+//            }
+//        });
+//        builder.create().show();
+//    }
 
 
 

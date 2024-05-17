@@ -25,6 +25,9 @@ public final class ActivityBluetoothBinding implements ViewBinding {
   public final AppCompatButton appCompatButton;
 
   @NonNull
+  public final AppCompatButton appCompatButton2;
+
+  @NonNull
   public final TextView certiText;
 
   @NonNull
@@ -35,6 +38,9 @@ public final class ActivityBluetoothBinding implements ViewBinding {
 
   @NonNull
   public final ConstraintLayout constraintLayout2;
+
+  @NonNull
+  public final ActivityToolbarBinding include;
 
   @NonNull
   public final TextView inputStringText;
@@ -51,23 +57,30 @@ public final class ActivityBluetoothBinding implements ViewBinding {
   @NonNull
   public final TextView textView3;
 
+  @NonNull
+  public final TextView tvNoCertifi;
+
   private ActivityBluetoothBinding(@NonNull ConstraintLayout rootView,
-      @NonNull AppCompatButton appCompatButton, @NonNull TextView certiText,
-      @NonNull TextView connectionStatusTextview, @NonNull ConstraintLayout constraintLayout,
-      @NonNull ConstraintLayout constraintLayout2, @NonNull TextView inputStringText,
+      @NonNull AppCompatButton appCompatButton, @NonNull AppCompatButton appCompatButton2,
+      @NonNull TextView certiText, @NonNull TextView connectionStatusTextview,
+      @NonNull ConstraintLayout constraintLayout, @NonNull ConstraintLayout constraintLayout2,
+      @NonNull ActivityToolbarBinding include, @NonNull TextView inputStringText,
       @NonNull TextView pregText, @NonNull ImageView textView, @NonNull TextView textView2,
-      @NonNull TextView textView3) {
+      @NonNull TextView textView3, @NonNull TextView tvNoCertifi) {
     this.rootView = rootView;
     this.appCompatButton = appCompatButton;
+    this.appCompatButton2 = appCompatButton2;
     this.certiText = certiText;
     this.connectionStatusTextview = connectionStatusTextview;
     this.constraintLayout = constraintLayout;
     this.constraintLayout2 = constraintLayout2;
+    this.include = include;
     this.inputStringText = inputStringText;
     this.pregText = pregText;
     this.textView = textView;
     this.textView2 = textView2;
     this.textView3 = textView3;
+    this.tvNoCertifi = tvNoCertifi;
   }
 
   @Override
@@ -103,6 +116,12 @@ public final class ActivityBluetoothBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.appCompatButton2;
+      AppCompatButton appCompatButton2 = ViewBindings.findChildViewById(rootView, id);
+      if (appCompatButton2 == null) {
+        break missingId;
+      }
+
       id = R.id.certi_text;
       TextView certiText = ViewBindings.findChildViewById(rootView, id);
       if (certiText == null) {
@@ -126,6 +145,13 @@ public final class ActivityBluetoothBinding implements ViewBinding {
       if (constraintLayout2 == null) {
         break missingId;
       }
+
+      id = R.id.include;
+      View include = ViewBindings.findChildViewById(rootView, id);
+      if (include == null) {
+        break missingId;
+      }
+      ActivityToolbarBinding binding_include = ActivityToolbarBinding.bind(include);
 
       id = R.id.input_string_text;
       TextView inputStringText = ViewBindings.findChildViewById(rootView, id);
@@ -157,9 +183,16 @@ public final class ActivityBluetoothBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityBluetoothBinding((ConstraintLayout) rootView, appCompatButton, certiText,
-          connectionStatusTextview, constraintLayout, constraintLayout2, inputStringText, pregText,
-          textView, textView2, textView3);
+      id = R.id.tv_no_certifi;
+      TextView tvNoCertifi = ViewBindings.findChildViewById(rootView, id);
+      if (tvNoCertifi == null) {
+        break missingId;
+      }
+
+      return new ActivityBluetoothBinding((ConstraintLayout) rootView, appCompatButton,
+          appCompatButton2, certiText, connectionStatusTextview, constraintLayout,
+          constraintLayout2, binding_include, inputStringText, pregText, textView, textView2,
+          textView3, tvNoCertifi);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
