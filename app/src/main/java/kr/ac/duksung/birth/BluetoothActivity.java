@@ -217,6 +217,8 @@ public class BluetoothActivity extends AppCompatActivity
         });
 
         ConstraintLayout imageButton2 = includeView.findViewById(R.id.constraintLayout10);
+
+
         imageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -379,11 +381,9 @@ public class BluetoothActivity extends AppCompatActivity
                                     layout.setVisibility(View.VISIBLE);
                                     noCertifi.setVisibility(View.GONE);
 
-                                    Log.d("rotlqkfsus", "좆같다");
 //                                    Intent intent = new Intent("kr.ac.duksung.birth.UPDATE_IMAGEVIEW_COLOR");
 //                                    intent.putExtra("changeSeatColor", true);
 //                                    sendBroadcast(intent);
-
 //                                    showPairedDevicesListDialog();
                                 } else if (boolValue == 0) {
                                     mName.setText(name);
@@ -859,7 +859,6 @@ public class BluetoothActivity extends AppCompatActivity
             if (resultCode == RESULT_OK) {
                 //BlueTooth is now Enable
                 Log.d("연결 기기들", "확인완료");
-//                showPairedDevicesListDialog();
             }
             if (resultCode == RESULT_CANCELED) {
                 showQuitDialog("You need to enable bluetooth");

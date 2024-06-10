@@ -4,8 +4,15 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
+<<<<<<< HEAD
 import android.view.View
 import android.widget.AdapterView
+=======
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+>>>>>>> 11e26fc188ff1d501a49322d89ea9023843af1b0
 import androidx.appcompat.app.AppCompatActivity
 import kr.ac.duksung.birth.Spinner.HoseonAdapter
 import kr.ac.duksung.birth.Spinner.HoseonModel
@@ -15,7 +22,10 @@ import kr.ac.duksung.birth.Spinner.StationAdapter
 import kr.ac.duksung.birth.Spinner.StationModel
 import kr.ac.duksung.birth.Spinner.TimeAdapter
 import kr.ac.duksung.birth.Spinner.TimeModel
+<<<<<<< HEAD
 //import kr.ac.duksung.birth.alarm.SeatReceiver
+=======
+>>>>>>> 11e26fc188ff1d501a49322d89ea9023843af1b0
 import kr.ac.duksung.birth.databinding.ActivitySeatBinding
 
 class SeatActivity : AppCompatActivity() {
@@ -29,8 +39,11 @@ class SeatActivity : AppCompatActivity() {
     private val listofTime = ArrayList<TimeModel>()
     private lateinit var seatAdapter: SeatAdapter
     private val listofSeat = ArrayList<SeatModel>()
+<<<<<<< HEAD
 
 //    private val broadcastReceiver = SeatReceiver()
+=======
+>>>>>>> 11e26fc188ff1d501a49322d89ea9023843af1b0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySeatBinding.inflate(layoutInflater)
