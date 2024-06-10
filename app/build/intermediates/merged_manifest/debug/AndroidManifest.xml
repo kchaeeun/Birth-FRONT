@@ -104,7 +104,7 @@
         <!-- android:name=".CheckActivity" -->
         <!-- android:exported="false" /> -->
         <activity
-            android:name="kr.ac.duksung.birth.MainActivity"
+            android:name="kr.ac.duksung.birth.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -112,7 +112,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="kr.ac.duksung.birth.SplashActivity" />
+        <activity android:name="kr.ac.duksung.birth.MainActivity" />
         <activity
             android:name="kr.ac.duksung.birth.BluetoothActivity"
             android:exported="true" />
@@ -120,6 +120,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="alarm_picture"
+            android:resource="@drawable/ic_alarm_preg" />
 
         <service android:name="kr.ac.duksung.birth.TestService" />
 

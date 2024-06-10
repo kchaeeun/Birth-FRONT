@@ -3026,6 +3026,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable dialog_background
 drawable entry_seat
+drawable ic_alarm_preg
 drawable ic_alram
 drawable ic_arrow_back_black_24
 drawable ic_birth
@@ -3051,6 +3052,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_red_seat
 drawable ic_search_black_24
+drawable ic_stat_name
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password

@@ -71,7 +71,7 @@ class CheckAlarmReceiver : BroadcastReceiver() {
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
             .setStyle(NotificationCompat.DecoratedCustomViewStyle())
-            .setSmallIcon(R.drawable.ic_alram)
+            .setSmallIcon(R.drawable.ic_alarm_preg)
             .setCustomContentView(notificationLayout)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .build()

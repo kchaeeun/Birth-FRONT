@@ -88,7 +88,7 @@
         <!-- android:name=".CheckActivity" -->
         <!-- android:exported="false" /> -->
         <activity
-                android:name=".MainActivity"
+                android:name=".SplashActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -96,7 +96,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashActivity"/>
+        <activity android:name=".MainActivity"/>
         <activity
                 android:name=".BluetoothActivity"
                 android:exported="true" />
@@ -104,7 +104,9 @@
         <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts" />
-
+        <meta-data
+            android:name="alarm_picture"
+            android:resource="@drawable/ic_alarm_preg"/>
         <service android:name=".TestService" />
     </application>
 
