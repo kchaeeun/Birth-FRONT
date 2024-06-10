@@ -22,7 +22,7 @@
                     android:text="임산부석에 착석하신게 맞나요?"
                     android:layout_marginBottom="10dp"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/pretendard_semibold" />
 
@@ -33,7 +33,7 @@
                     android:text="※ 착석하신 것이 아니라면 '아니오' 버튼을 눌러주세요❗"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:layout_marginBottom="15dp"
                     android:fontFamily="@font/pretendard_regular" />
 
@@ -55,7 +55,6 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:layout_weight="1"
-                            android:textSize="18sp"
                             android:layout_gravity="center"
                             android:textColor="#AC9FA1"
                             android:fontFamily="@font/inter_semibold"
@@ -76,7 +75,6 @@
                             android:textColor="#EC4F43"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textSize="18sp"
                             android:fontFamily="@font/pretendard_semibold"
                             android:text="아니오" />
                 </LinearLayout>

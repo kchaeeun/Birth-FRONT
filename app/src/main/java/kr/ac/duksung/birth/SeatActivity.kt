@@ -57,10 +57,7 @@ class SeatActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        sharedPreferences = getSharedPreferences("seat-change", Context.MODE_PRIVATE)
-        Log.d("shared", sharedPreferences.toString())
 
-        retrieveStoredValues()
 
         // 스피너 설정
         setupSpinnerHoseon()
@@ -69,6 +66,10 @@ class SeatActivity : AppCompatActivity() {
         setupSpinnerSeat()
         setupSpinnerHandler()
         // SharedPreferences 변경 리스너 설정
+
+        sharedPreferences = getSharedPreferences("seat-change", Context.MODE_PRIVATE)
+        Log.d("shared", sharedPreferences.toString())
+        retrieveStoredValues()
     }
 
     private fun retrieveStoredValues() {
@@ -80,6 +81,7 @@ class SeatActivity : AppCompatActivity() {
         if (changeSeatColor) {
             // Change the background of imageView5 to red
             binding.imageView5.setBackgroundResource(R.drawable.ic_red_seat)
+            seatChange()
         } else {
             binding.imageView5.setBackgroundResource(R.drawable.rotate_pink_seat)
         }
@@ -150,6 +152,19 @@ class SeatActivity : AppCompatActivity() {
                     binding.tv4.text = seat.seat[0] + "-3"
                 }
 
+
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                // 선택되지 않았을 때의 동작
+            }
+        }
+    }
+
+    private fun seatChange() {
+
+        binding.spinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 if (p2 == 0) { // Check if the first item is selected
                     // Change imageView5 background to red drawable
                     binding.imageView5.setBackgroundResource(R.drawable.ic_red_seat)
@@ -164,12 +179,13 @@ class SeatActivity : AppCompatActivity() {
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 // 선택되지 않았을 때의 동작
             }
+
         }
-    }
 
 //    override fun onPause() {
 //        super.onPause()
 //        unregisterReceiver(seatReceiver)
 //    }
 
+    }
 }

@@ -60,8 +60,8 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\custom_device_list_dialog_layout.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-mergeDebugResources-48:/layout/activity_seat.xml",
-        "source": "kr.ac.duksung.birth.app-main-51:/layout/activity_seat.xml"
+        "merged": "kr.ac.duksung.birth.app-mergeDebugResources-48:/layout/notification_layout.xml",
+        "source": "kr.ac.duksung.birth.app-main-51:/layout/notification_layout.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_check.xml",

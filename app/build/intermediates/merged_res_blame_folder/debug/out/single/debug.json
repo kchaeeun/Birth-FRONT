@@ -36,16 +36,16 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\btn_check_background_15.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_bg_custom_toast.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\bg_custom_toast.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_item_spinner3.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\item_spinner3.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_bg_custom_toast.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\bg_custom_toast.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_ic_launcher_background.xml.flat",
@@ -108,8 +108,8 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\item_spinner.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-49:/drawable_ic_red_seat.png.flat",
-        "source": "kr.ac.duksung.birth.app-main-51:/drawable/ic_red_seat.png"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_ic_red_seat.png.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\ic_red_seat.png"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_notification_layout.xml.flat",
@@ -226,6 +226,10 @@
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_seat_pink.png.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\seat_pink.png"
+    },
+    {
+        "merged": "kr.ac.duksung.birth.app-merged_res-49:/layout_notification_layout.xml.flat",
+        "source": "kr.ac.duksung.birth.app-main-51:/layout/notification_layout.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_repeat_copyright.xml.flat",
