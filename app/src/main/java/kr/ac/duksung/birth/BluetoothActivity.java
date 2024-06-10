@@ -62,6 +62,7 @@ import kr.ac.duksung.birth.alarm.CheckAlarmReceiver;
 
 import kr.ac.duksung.birth.alarm.AlarmManagerUtil;
 import kr.ac.duksung.birth.alarm.CheckAlarmReceiver;
+import kr.ac.duksung.birth.alarm.SeatReceiver;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -95,7 +96,7 @@ public class BluetoothActivity extends AppCompatActivity
     private AppCompatButton btnCerti;
 
 
-    private static final String BASE_URL = "http://192.168.0.21:8080";
+    private static final String BASE_URL = "http://192.168.191.141:8080";
     private static Retrofit retrofit;
 
     public static Retrofit getRetrofitInstance() {
@@ -228,6 +229,21 @@ public class BluetoothActivity extends AppCompatActivity
             }
         });
 
+        btnSeat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), SeatActivity.class);
+                    startActivity(intent);
+    }
+        });
+
+        btnCerti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -381,9 +397,11 @@ public class BluetoothActivity extends AppCompatActivity
                                     layout.setVisibility(View.VISIBLE);
                                     noCertifi.setVisibility(View.GONE);
 
-//                                    Intent intent = new Intent("kr.ac.duksung.birth.UPDATE_IMAGEVIEW_COLOR");
-//                                    intent.putExtra("changeSeatColor", true);
-//                                    sendBroadcast(intent);
+                                    SharedPreferences sharedPreferences = getSharedPreferences("seat-change", MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    editor.putBoolean("changeSeatColor", true);
+                                    editor.apply();
+
 //                                    showPairedDevicesListDialog();
                                 } else if (boolValue == 0) {
                                     mName.setText(name);
@@ -391,7 +409,6 @@ public class BluetoothActivity extends AppCompatActivity
                                     noCertifi.setVisibility(View.GONE);
                                     certifiText.setVisibility(View.VISIBLE);
                                     certifiText.setText("인증이 만료되었습니다.");
-
                                     Toast.makeText(BluetoothActivity.this, "임산부 인증에 실패하였습니다.", Toast.LENGTH_LONG).show();
                                 }
                             } else {

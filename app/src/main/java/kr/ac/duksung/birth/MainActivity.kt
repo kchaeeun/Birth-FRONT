@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kr.ac.duksung.birth.Retrofit.NumApiService
 import kr.ac.duksung.birth.Retrofit.Serial
@@ -116,6 +115,7 @@ class MainActivity : AppCompatActivity() {
                     // Handle failure by sending "0" to BluetoothActivity
                     val intent = Intent(this@MainActivity, BluetoothActivity::class.java)
     //                    intent.putExtra("num", serialNumber)
+
                     intent.putExtra("apiCallResult", 0) // Failure
                     startActivity(intent)
                 }
@@ -129,6 +129,12 @@ class MainActivity : AppCompatActivity() {
 //                    Toast.LENGTH_LONG
 //                ).show()
                 Log.e("Retrofit Error", "Failure: " + t.message)
+                Log.e("승리읨 눈", "dhdP")
+
+                val sharedPreferences = getSharedPreferences("seat-change", MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putBoolean("changeSeatColor", false)
+                editor.apply()
 
                 // Handle failure by sending "0" to BluetoothActivity
                 val intent = Intent(this@MainActivity, BluetoothActivity::class.java)

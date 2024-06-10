@@ -3049,6 +3049,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_red_seat
 drawable ic_search_black_24
 drawable m3_appbar_background
 drawable m3_avd_hide_password
@@ -3277,7 +3278,6 @@ id closest
 id collapseActionView
 id compress
 id confirm_button
-id connection_status_textview
 id constraint
 id constraint11
 id constraintLayout
@@ -3663,10 +3663,8 @@ id textStart
 id textTop
 id textView
 id textView2
-id textView3
 id textView4
 id textView5
-id textView6
 id textView7
 id textView8
 id textView9
@@ -3874,8 +3872,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_bluetooth
-layout fragment_seat
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_spinner

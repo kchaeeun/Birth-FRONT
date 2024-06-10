@@ -34,6 +34,7 @@ drawable ic_launcher_background
 drawable ic_launcher_background_pink
 drawable ic_launcher_foreground
 drawable ic_line
+drawable ic_red_seat
 drawable radio_btn_check
 drawable radio_btn_first
 drawable radio_btn_uncheck
@@ -61,7 +62,6 @@ id appCompatButton
 id appCompatButton2
 id button
 id certi_text
-id connection_status_textview
 id constraint11
 id constraintLayout
 id constraintLayout10
@@ -114,10 +114,8 @@ id spinner_3
 id spinner_4
 id textView
 id textView2
-id textView3
 id textView4
 id textView5
-id textView6
 id textView7
 id textView8
 id textView9
@@ -146,8 +144,6 @@ layout activity_toolbar
 layout custom_device_list_dialog_layout
 layout custom_list_item
 layout custom_toast
-layout fragment_bluetooth
-layout fragment_seat
 layout item_spinner
 layout item_spinner2
 layout item_spinner3

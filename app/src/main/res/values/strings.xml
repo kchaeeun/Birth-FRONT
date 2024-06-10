@@ -47,7 +47,6 @@
     </string>
 
     <string-array name="hoseon">
-        <item>호선</item>
         <item>1호선</item>
         <item>2호선</item>
         <item>3호선</item>
@@ -63,7 +62,6 @@
 
 
     <string-array name="station">
-        <item>출발역</item>
         <item>북한산 우이</item>
         <item>솔밭공원</item>
         <item>4.19 민주묘지</item>
@@ -80,7 +78,6 @@
     </string-array>
 
     <string-array name="time">
-        <item>시간대</item>
         <item>신설동 > 북한산 우이 18:01</item>
         <item>신설동 > 북한산 우이 18:04</item>
         <item>신설동 > 북한산 우이 18:09</item>
@@ -93,7 +90,6 @@
 
 
     <string-array name="seat">
-        <item>열차칸</item>
         <item>1번칸</item>
         <item>2번칸</item>
         <item>3번칸</item>
