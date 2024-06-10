@@ -137,22 +137,6 @@ class SeatActivity : AppCompatActivity() {
         }
         seatAdapter = SeatAdapter(this, R.layout.item_spinner4, listofSeat)
         binding.spinner4.adapter = seatAdapter
-
-        binding.spinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                if (position == 0) { // Check if the first item is selected
-                    // Change imageView5 background to red drawable
-                    binding.imageView5.setBackgroundResource(R.drawable.ic_red_seat)
-                } else {
-                    // Change imageView5 background to pink drawable for other selections
-                    binding.imageView5.setBackgroundResource(R.drawable.rotate_pink_seat)
-                }
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                // Do nothing
-            }
-        }
     }
 
     private fun setupSpinnerHandler() {
@@ -164,6 +148,14 @@ class SeatActivity : AppCompatActivity() {
                     binding.tv2.text = seat.seat[0] + "-2"
                     binding.tv3.text = seat.seat[0] + "-3"
                     binding.tv4.text = seat.seat[0] + "-3"
+                }
+
+                if (p2 == 0) { // Check if the first item is selected
+                    // Change imageView5 background to red drawable
+                    binding.imageView5.setBackgroundResource(R.drawable.ic_red_seat)
+                } else {
+                    // Change imageView5 background to pink drawable for other selections
+                    binding.imageView5.setBackgroundResource(R.drawable.rotate_pink_seat)
                 }
 
 
