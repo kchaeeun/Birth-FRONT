@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kr.ac.duksung.birth.Retrofit.NumApiService
 import kr.ac.duksung.birth.Retrofit.Serial
 import kr.ac.duksung.birth.databinding.ActivityMainBinding
@@ -15,7 +17,7 @@ import java.util.Calendar
 import java.util.Locale
 
 
-class MainActivity : BaseActivity() {
+class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
 
@@ -54,11 +56,11 @@ class MainActivity : BaseActivity() {
         binding.include.imageButton.visibility = View.INVISIBLE
 
         binding.button.setOnClickListener {
-            val intent = Intent(this, SeatActivity::class.java)
-            startActivity(intent)
-//            val num = binding.editText.text.toString()  // edittext 값을 가져올 때는 text.toString()을 사용해준다.
-//            makeApiCall(num)
-//            Log.d("num",num)
+//            val intent = Intent(this, BluetoothActivity::class.java)
+//            startActivity(intent)
+            val num = binding.editText.text.toString()  // edittext 값을 가져올 때는 text.toString()을 사용해준다.
+            makeApiCall(num)
+            Log.d("num",num)
 //            Toast.makeText(this, "rne", Toast.LENGTH_SHORT).show()
         }
     }

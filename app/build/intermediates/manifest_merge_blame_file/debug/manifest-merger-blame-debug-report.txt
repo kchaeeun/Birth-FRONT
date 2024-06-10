@@ -101,7 +101,7 @@
 55-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:39:17-51
 56        <activity
 56-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:40:9-42:44
-57            android:name="kr.ac.duksung.birth.MainActivity"
+57            android:name="kr.ac.duksung.birth.SeatActivity"
 57-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:41:17-45
 58            android:exported="false" />
 58-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:42:17-41
@@ -194,7 +194,7 @@
 105        <!-- android:exported="false" /> -->
 106        <activity
 106-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:90:9-98:20
-107            android:name="kr.ac.duksung.birth.SeatActivity"
+107            android:name="kr.ac.duksung.birth.MainActivity"
 107-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:91:17-45
 108            android:exported="true" >
 108-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:92:17-40

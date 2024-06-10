@@ -8,9 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kr.ac.duksung.birth.DotProgressBar.DotProgressBar
 import kr.ac.duksung.birth.databinding.ActivitySirenBinding
-import kr.ac.duksung.birth.databinding.ActivitySplashBinding
-
-class SirenActivity: BaseActivity() {
+class SirenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySirenBinding
 
@@ -27,4 +25,7 @@ class SirenActivity: BaseActivity() {
 
         }
     }
+//    private fun onRadioButtonClicked(View view) {
+//        Boolean isSelected = binding.
+//    }
 }

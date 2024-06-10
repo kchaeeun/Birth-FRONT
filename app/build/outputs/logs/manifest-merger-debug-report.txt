@@ -182,7 +182,7 @@ ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest
 		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:39:17-51
 	android:name
 		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:36:17-45
-activity#kr.ac.duksung.birth.MainActivity
+activity#kr.ac.duksung.birth.SeatActivity
 ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:40:9-42:44
 	android:exported
 		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:42:17-41
@@ -262,7 +262,7 @@ action#kr.ac.duksung.birth.NO_ACTION
 ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:85:17-72
 	android:name
 		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:85:25-69
-activity#kr.ac.duksung.birth.SeatActivity
+activity#kr.ac.duksung.birth.MainActivity
 ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:90:9-98:20
 	android:exported
 		ADDED from D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:92:17-40
