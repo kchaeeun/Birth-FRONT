@@ -16,6 +16,7 @@ MERGED from [androidx.navigation:navigation-ui-ktx:2.7.7] C:\Users\kangc\.gradle
 MERGED from [androidx.navigation:navigation-ui:2.7.7] C:\Users\kangc\.gradle\caches\transforms-3\3449c2a4c8f8a6ebdaea0159b6dd7bdc\transformed\navigation-ui-2.7.7\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\kangc\.gradle\caches\transforms-3\d0dc134a979f1bbea9a314d52c820920\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\kangc\.gradle\caches\transforms-3\7b0ed5ec5a99fb34b6558250c2aa2155\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.airbnb.android:lottie:5.0.2] C:\Users\kangc\.gradle\caches\transforms-3\438882271d33077fbdba1ed2d30b3216\transformed\jetified-lottie-5.0.2\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\kangc\.gradle\caches\transforms-3\aa625f9285859e10f66556e10a426a84\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\kangc\.gradle\caches\transforms-3\5a449eb8bb4988a9f40e09a3791d84f3\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\c22e1f4de66b80ca1a7d987c2a428528\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
@@ -130,6 +131,8 @@ MERGED from [com.google.android.material:material:1.10.0] C:\Users\kangc\.gradle
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\kangc\.gradle\caches\transforms-3\d0dc134a979f1bbea9a314d52c820920\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\kangc\.gradle\caches\transforms-3\7b0ed5ec5a99fb34b6558250c2aa2155\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\kangc\.gradle\caches\transforms-3\7b0ed5ec5a99fb34b6558250c2aa2155\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:5.0.2] C:\Users\kangc\.gradle\caches\transforms-3\438882271d33077fbdba1ed2d30b3216\transformed\jetified-lottie-5.0.2\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:5.0.2] C:\Users\kangc\.gradle\caches\transforms-3\438882271d33077fbdba1ed2d30b3216\transformed\jetified-lottie-5.0.2\AndroidManifest.xml:9:5-20
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\91a9416e297aa265679b7c40dd3ec37f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kangc\.gradle\caches\transforms-3\91a9416e297aa265679b7c40dd3ec37f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\kangc\.gradle\caches\transforms-3\c3bb486fd3d43fd738607d35335d1e65\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:22:5-23:19
@@ -332,6 +335,8 @@ MERGED from [com.google.android.material:material:1.10.0] C:\Users\kangc\.gradle
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\kangc\.gradle\caches\transforms-3\d0dc134a979f1bbea9a314d52c820920\transformed\material-1.10.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\kangc\.gradle\caches\transforms-3\7b0ed5ec5a99fb34b6558250c2aa2155\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\kangc\.gradle\caches\transforms-3\7b0ed5ec5a99fb34b6558250c2aa2155\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:5.0.2] C:\Users\kangc\.gradle\caches\transforms-3\438882271d33077fbdba1ed2d30b3216\transformed\jetified-lottie-5.0.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:5.0.2] C:\Users\kangc\.gradle\caches\transforms-3\438882271d33077fbdba1ed2d30b3216\transformed\jetified-lottie-5.0.2\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\kangc\.gradle\caches\transforms-3\aa625f9285859e10f66556e10a426a84\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\kangc\.gradle\caches\transforms-3\aa625f9285859e10f66556e10a426a84\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\kangc\.gradle\caches\transforms-3\5a449eb8bb4988a9f40e09a3791d84f3\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44

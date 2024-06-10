@@ -105,6 +105,8 @@ id layout_contents
 id layout_no
 id layout_yes
 id listView
+id lotti
+id lottie_animation
 id preg_text
 id radioButton
 id radioButton2
@@ -150,12 +152,14 @@ layout item_spinner
 layout item_spinner2
 layout item_spinner3
 layout item_spinner4
+layout lottie_animation
 layout notification_layout
 layout repeat_copyright
 mipmap ic_launcher
 mipmap ic_launcher_foreground_logo
 mipmap ic_launcher_foreground_pinck
 mipmap ic_launcher_round
+raw dot_progress_bar
 string app_name
 string first_fragment_label
 string hello_blank_fragment

@@ -8,6 +8,16 @@
         android:background="#FFE0DB"
         tools:context=".SplashActivity">
 
+    <include
+            layout="@layout/lottie_animation"
+            android:id="@+id/lottie_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="43dp" />
+
     <ImageView
             android:layout_width="122dp"
             android:layout_height="50dp"
@@ -24,14 +34,7 @@
             layout="@layout/repeat_copyright"
             android:id="@+id/include3" />
 
-    <kr.ac.duksung.birth.DotProgressBar.DotProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="30dp" />
-<!--    <ProgressBar-->
+    <!--    <ProgressBar-->
 <!--            style="?android:attr/progressBarStyleHorizontal"-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->
