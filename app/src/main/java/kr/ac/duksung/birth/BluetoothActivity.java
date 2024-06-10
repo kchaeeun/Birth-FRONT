@@ -42,6 +42,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -67,14 +68,13 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class BluetoothActivity extends BaseActivity
+public class BluetoothActivity extends AppCompatActivity
 {
     private Intent serviceIntent;
     private static final int REQUEST_ENABLE_BLUETOOTH = 1;
     private final int REQUEST_BLUETOOTH_ENABLE = 100;
     private static final int REQUEST_BLUETOOTH_PERMISSION = 101;
 
-    private TextView mConnectionStatus;
     private TextView mInputEditText;
     private TextView mName;
     private TextView noCertifi;
@@ -112,6 +112,7 @@ public class BluetoothActivity extends BaseActivity
         @Override
         public void onReceive(Context context, Intent intent) {
             Integer noAction = intent.getIntExtra("no-action", -1);
+            Log.d("noActiont value", String.valueOf(noAction));
             // noAction 값이 0인 경우
             if (noAction != null) {
                 boolValue = noAction;
@@ -119,6 +120,7 @@ public class BluetoothActivity extends BaseActivity
         }
 
     };
+
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -141,11 +143,11 @@ public class BluetoothActivity extends BaseActivity
         registerReceiver(receiver, filter);
 
         // 알림 설정
-//        if (boolValue == 1) {
-//            // 정적 선언
-//            CheckAlarmReceiver.Companion.setupNotificationChannel(this);
-//
-//        }
+        if (boolValue == 1) {
+            // 정적 선언
+            CheckAlarmReceiver.Companion.setupNotificationChannel(this);
+
+        }
 
         PowerManager pm = (PowerManager) getApplicationContext().getSystemService(POWER_SERVICE);
         boolean isWhiteListing = false;
@@ -192,7 +194,6 @@ public class BluetoothActivity extends BaseActivity
 //            }
 //        });
 
-        mConnectionStatus = (TextView)findViewById(R.id.connection_status_textview);
         mInputEditText = (TextView)findViewById(R.id.input_string_text);
         mName = (TextView)findViewById(R.id.textView2);
         noCertifi = (TextView)findViewById(R.id.tv_no_certifi);
@@ -206,7 +207,7 @@ public class BluetoothActivity extends BaseActivity
         View includeView = findViewById(R.id.include);
 
         // include된 레이아웃 내의 이미지 버튼에 접근합니다.
-        ImageButton imageButton = includeView.findViewById(R.id.imageButton);
+        ConstraintLayout imageButton = includeView.findViewById(R.id.constraint11);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -215,7 +216,7 @@ public class BluetoothActivity extends BaseActivity
             }
         });
 
-        ImageButton imageButton2 = includeView.findViewById(R.id.imageButton2);
+        ConstraintLayout imageButton2 = includeView.findViewById(R.id.constraintLayout10);
         imageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -377,7 +378,13 @@ public class BluetoothActivity extends BaseActivity
                                     certifiText.setVisibility(View.VISIBLE);
                                     layout.setVisibility(View.VISIBLE);
                                     noCertifi.setVisibility(View.GONE);
-                                    showPairedDevicesListDialog();
+
+                                    Log.d("rotlqkfsus", "좆같다");
+//                                    Intent intent = new Intent("kr.ac.duksung.birth.UPDATE_IMAGEVIEW_COLOR");
+//                                    intent.putExtra("changeSeatColor", true);
+//                                    sendBroadcast(intent);
+
+//                                    showPairedDevicesListDialog();
                                 } else if (boolValue == 0) {
                                     mName.setText(name);
                                     layout.setVisibility(View.VISIBLE);
@@ -440,8 +447,6 @@ public class BluetoothActivity extends BaseActivity
             } catch (IOException e) {
                 Log.e( TAG, "socket create failed " + e.getMessage());
             }
-
-            mConnectionStatus.setText("connecting...");
         }
 
 
@@ -487,12 +492,12 @@ public class BluetoothActivity extends BaseActivity
                 connected(mBluetoothSocket);
 
                 // 호출 조건 추가
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//                    // 이제 boolValue가 1인 경우에만 알람 매니저 설정
-//                    Log.d("alarmManagerUtil", "alarmStart");
-//                    AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
-//                }
-//                checkNotificationPermission();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    // 이제 boolValue가 1인 경우에만 알람 매니저 설정
+                    Log.d("alarmManagerUtil", "alarmStart");
+                    AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
+                }
+                checkNotificationPermission();
             }
 
             else{
@@ -537,7 +542,7 @@ public class BluetoothActivity extends BaseActivity
             }
 
             Log.d( TAG, "connected to "+mConnectedDeviceName);
-            mConnectionStatus.setText( "connected to "+mConnectedDeviceName);
+//            mConnectionStatus.setText( "connected to "+mConnectedDeviceName);
         }
 
 
@@ -732,8 +737,25 @@ public class BluetoothActivity extends BaseActivity
             return;
         }
 
-        CustomDeviceListDialog dialog = new CustomDeviceListDialog(this, pairedDevices);
-        dialog.show();
+        String[] items;
+        items = new String[pairedDevices.length];
+        for (int i=0;i<pairedDevices.length;i++) {
+            items[i] = pairedDevices[i].getName();
+        }
+
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setTitle("앉은 자리를 선택하세요");
+        builder.setCancelable(false);
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+
+                ConnectTask task = new ConnectTask(pairedDevices[which]);
+                task.execute();
+            }
+        });
+        builder.create().show();
     }
 
 
@@ -835,7 +857,8 @@ public class BluetoothActivity extends BaseActivity
 
         if (requestCode == REQUEST_BLUETOOTH_ENABLE) {
             if (resultCode == RESULT_OK) {
-                //BlueTooth is now Enabled
+                //BlueTooth is now Enable
+                Log.d("연결 기기들", "확인완료");
 //                showPairedDevicesListDialog();
             }
             if (resultCode == RESULT_CANCELED) {

@@ -54,7 +54,7 @@
             android:label="@string/title_activity_base"
             android:theme="@style/Theme.Birth" />
         <activity
-            android:name="kr.ac.duksung.birth.MainActivity"
+            android:name="kr.ac.duksung.birth.SeatActivity"
             android:exported="false" />
         <activity
             android:name="kr.ac.duksung.birth.NoCertifiActivity"
@@ -104,7 +104,7 @@
         <!-- android:name=".CheckActivity" -->
         <!-- android:exported="false" /> -->
         <activity
-            android:name="kr.ac.duksung.birth.SeatActivity"
+            android:name="kr.ac.duksung.birth.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

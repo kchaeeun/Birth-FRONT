@@ -91,8 +91,9 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView8"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="10dp">
+            <!--https://bingguel.tistory.com/15-->
 
-            <RadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                     android:text="어플 오작동"
                     android:textSize="13sp"
                     android:fontFamily="@font/pretendard_regular"
@@ -102,7 +103,7 @@
                     android:layout_marginBottom="7dp"
                     android:id="@+id/radioButton" />
 
-            <RadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                     android:text="비임산부 임산부 배려석 착석"
                     android:textSize="13sp"
                     android:fontFamily="@font/pretendard_regular"
@@ -112,7 +113,7 @@
                     android:layout_marginBottom="7dp"
                     android:id="@+id/radioButton2" />
 
-            <RadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                     android:text="임산부 인증 오류"
                     android:textSize="13sp"
                     android:fontFamily="@font/pretendard_regular"

@@ -4,6 +4,10 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\bg_spinner_seat.xml"
     },
     {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_rotate_seat_red.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\rotate_seat_red.xml"
+    },
+    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_custom_toast.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\custom_toast.xml"
     },
@@ -14,10 +18,6 @@
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_ic_birth.png.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\ic_birth.png"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_fragment_first2.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_first2.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_activity_toolbar.xml.flat",
@@ -32,24 +32,24 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_no_certifi.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_content_base.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\content_base.xml"
+        "merged": "kr.ac.duksung.birth.app-merged_res-49:/layout_activity_bluetooth.xml.flat",
+        "source": "kr.ac.duksung.birth.app-main-51:/layout/activity_bluetooth.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_btn_check_background_15.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\btn_check_background_15.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_bg_custom_toast.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\bg_custom_toast.xml"
-    },
-    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_content_seat.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\content_seat.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_item_spinner3.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\item_spinner3.xml"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_bg_custom_toast.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\bg_custom_toast.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_ic_launcher_background.xml.flat",
@@ -72,12 +72,12 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_fragment_second.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_second.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-mdpi_ic_launcher_foreground_pinck.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-mdpi\\ic_launcher_foreground_pinck.webp"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_fragment_first.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_first.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-xxhdpi_ic_launcher_foreground_pinck.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-xxhdpi\\ic_launcher_foreground_pinck.webp"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_fragment_bluetooth.xml.flat",
@@ -100,10 +100,6 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\entry_seat.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_activity_blue.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_blue.xml"
-    },
-    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_rotate_pink_seat.png.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\rotate_pink_seat.png"
     },
@@ -122,10 +118,6 @@
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_circle_4.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\circle_4.xml"
-    },
-    {
-        "merged": "kr.ac.duksung.birth.app-merged_res-49:/layout_item_spinner.xml.flat",
-        "source": "kr.ac.duksung.birth.app-main-51:/layout/item_spinner.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_arraow_pink.png.flat",
@@ -158,10 +150,6 @@
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_circle_1.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\circle_1.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_fragment_login.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_login.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\font_inter_semibold.xml.flat",
@@ -200,10 +188,6 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\circle_5.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\navigation_nav_graph2.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\navigation\\nav_graph2.xml"
-    },
-    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-xxxhdpi_ic_launcher_foreground_logo.webp.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-xxxhdpi\\ic_launcher_foreground_logo.webp"
     },
@@ -212,8 +196,16 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-xxxhdpi_ic_launcher_foreground_pinck.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-xxxhdpi\\ic_launcher_foreground_pinck.webp"
+    },
+    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_item_spinner4.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\item_spinner4.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_btn_check_background.xml.flat",
@@ -236,20 +228,16 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\seat_pink.png"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\navigation\\nav_graph.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_fragment_second2.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_second2.xml"
-    },
-    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_repeat_copyright.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\repeat_copyright.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\font_pretendard_semibold.otf.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\font\\pretendard_semibold.otf"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_ic_launcher_background_pink.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\ic_launcher_background_pink.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -260,16 +248,16 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\custom_list_item.xml"
     },
     {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-hdpi_ic_launcher_foreground_pinck.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-hdpi\\ic_launcher_foreground_pinck.webp"
+    },
+    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_semo.png.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\semo.png"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_activity_base.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_base.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_radio_btn_uncheck.png.flat",
@@ -304,10 +292,6 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\font\\pretendard_regular.otf"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_activity_base2.xml.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_base2.xml"
-    },
-    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\xml\\backup_rules.xml"
     },
@@ -324,12 +308,12 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-xhdpi\\ic_launcher_foreground_logo.webp"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_radio_btn_check.png.flat",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\radio_btn_check.png"
-    },
-    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_circle_3.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\circle_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_radio_btn_check.png.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\radio_btn_check.png"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-mdpi_ic_launcher_foreground_logo.webp.flat",
@@ -340,12 +324,20 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\layout_item_spinner2.xml.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\item_spinner2.xml"
+    },
+    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_siren_box.xml.flat",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\drawable\\siren_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\mipmap-xhdpi_ic_launcher_foreground_pinck.webp.flat",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\mipmap-xhdpi\\ic_launcher_foreground_pinck.webp"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-merged_res-49:\\drawable_spinner_1.xml.flat",

@@ -38,7 +38,7 @@
                 android:label="@string/title_activity_base"
                 android:theme="@style/Theme.Birth" />
         <activity
-                android:name=".MainActivity"
+                android:name=".SeatActivity"
                 android:exported="false" />
         <activity
                 android:name=".NoCertifiActivity"
@@ -88,7 +88,7 @@
         <!-- android:name=".CheckActivity" -->
         <!-- android:exported="false" /> -->
         <activity
-                android:name=".SeatActivity"
+                android:name=".MainActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

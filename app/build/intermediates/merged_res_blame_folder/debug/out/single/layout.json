@@ -1,47 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\item_spinner.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\item_spinner.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\fragment_second2.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_second2.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_bluetooth.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_bluetooth.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\custom_device_list_dialog_layout.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\custom_device_list_dialog_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\fragment_first2.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_first2.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_check.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_check.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\fragment_bluetooth.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_bluetooth.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\fragment_login.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_login.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_base.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_base.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_toolbar.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_toolbar.xml"
-    },
-    {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_seat.xml",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_seat.xml"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\item_spinner3.xml",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\item_spinner3.xml"
+    },
+    {
+        "merged": "kr.ac.duksung.birth.app-mergeDebugResources-48:/layout/activity_bluetooth.xml",
+        "source": "kr.ac.duksung.birth.app-main-51:/layout/activity_bluetooth.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\repeat_copyright.xml",
@@ -56,8 +24,8 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_no_certifi.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\content_seat.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\content_seat.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\item_spinner.xml",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\item_spinner.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\custom_toast.xml",
@@ -68,12 +36,12 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_seat.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_base2.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_base2.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\item_spinner4.xml",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\item_spinner4.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\content_base.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\content_base.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\item_spinner2.xml",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\item_spinner2.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_splash.xml",
@@ -84,27 +52,31 @@
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_siren.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_blue.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_blue.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_bluetooth.xml",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_bluetooth.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\custom_list_item.xml",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\custom_list_item.xml"
     },
     {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\fragment_first.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_first.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\custom_device_list_dialog_layout.xml",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\custom_device_list_dialog_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_check.xml",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_check.xml"
+    },
+    {
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\fragment_bluetooth.xml",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_bluetooth.xml"
     },
     {
         "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_main.xml",
         "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_main.xml"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-mergeDebugResources-48:/layout/item_spinner.xml",
-        "source": "kr.ac.duksung.birth.app-main-51:/layout/item_spinner.xml"
-    },
-    {
-        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\fragment_second.xml",
-        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\fragment_second.xml"
+        "merged": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-mergeDebugResources-48:\\layout\\activity_toolbar.xml",
+        "source": "C:\\Users\\kangc\\.gradle\\daemon\\8.0\\kr.ac.duksung.birth.app-main-51:\\layout\\activity_toolbar.xml"
     }
 ]

@@ -13,7 +13,7 @@ class NoActionReceiver: BroadcastReceiver() {
 
         // 데이터를 브로드캐스트로 전달
         val broadcastIntent = Intent("kr.ac.duksung.birth.DATA_ACTION")
-        broadcastIntent.putExtra("no-action", 0)
+        broadcastIntent.putExtra("no-action", 2)
         p0?.sendBroadcast(broadcastIntent)
 
         val notificationManager = NotificationManagerCompat.from(p0!!)

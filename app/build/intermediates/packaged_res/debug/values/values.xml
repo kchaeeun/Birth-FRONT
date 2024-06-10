@@ -15,6 +15,7 @@
         </item>
     </string-array>
     <string-array name="hoseon">
+        <item>호선</item>
         <item>1호선</item>
         <item>2호선</item>
         <item>3호선</item>
@@ -31,15 +32,17 @@
         <item>@font/inter_semibold</item>
     </array>
     <string-array name="seat">
+        <item>열차칸</item>
         <item>1번칸</item>
         <item>2번칸</item>
         <item>3번칸</item>
         <item>4번칸</item>
     </string-array>
     <string-array name="station">
+        <item>출발역</item>
         <item>북한산 우이</item>
         <item>솔밭공원</item>
-        <item>4.19 민주묘지역</item>
+        <item>4.19 민주묘지</item>
         <item>가오리</item>
         <item>화계</item>
         <item>삼양</item>
@@ -52,22 +55,19 @@
         <item>신설동</item>
     </string-array>
     <string-array name="time">
-        <item>소요산 > 인천 12:04</item>
-        <item>2호선</item>
-        <item>3호선</item>
-        <item>4호선</item>
-        <item>5호선</item>
-        <item>6호선</item>
-        <item>7호선</item>
-        <item>8호선</item>
-        <item>9호선</item>
-        <item>신분당선</item>
-        <item>우이신설</item>
+        <item>시간대</item>
+        <item>신설동 > 북한산 우이 18:01</item>
+        <item>신설동 > 북한산 우이 18:04</item>
+        <item>신설동 > 북한산 우이 18:09</item>
+        <item>신설동 > 북한산 우이 18:14</item>
+        <item>신설동 > 북한산 우이 18:17</item>
+        <item>신설동 > 북한산 우이 18:20</item>
+        <item>신설동 > 북한산 우이 18:23</item>
+        <item>신설동 > 북한산 우이 18:27</item>
     </string-array>
     <color name="black">#FF000000</color>
-    <color name="ic_launcher_background_pink">#FFE0DB</color>
+    <color name="ic_launcher_background">#FFE0DB</color>
     <color name="white">#FFFFFFFF</color>
-    <dimen name="fab_margin">16dp</dimen>
     <string name="app_name">Birth</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>

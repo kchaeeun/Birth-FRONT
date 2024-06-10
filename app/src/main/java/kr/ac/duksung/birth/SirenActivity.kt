@@ -8,9 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kr.ac.duksung.birth.DotProgressBar.DotProgressBar
 import kr.ac.duksung.birth.databinding.ActivitySirenBinding
-import kr.ac.duksung.birth.databinding.ActivitySplashBinding
-
-class SirenActivity: BaseActivity() {
+class SirenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySirenBinding
 
@@ -19,12 +17,15 @@ class SirenActivity: BaseActivity() {
         binding = ActivitySirenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.include.imageButton2.visibility = View.GONE
+        binding.include.constraintLayout10.visibility = View.GONE
 
-        binding.include.imageButton.setOnClickListener {
+        binding.include.constraint11.setOnClickListener {
             finish()
             Log.d("버튼 눌림 확인", "눌림")
 
         }
     }
+//    private fun onRadioButtonClicked(View view) {
+//        Boolean isSelected = binding.
+//    }
 }
