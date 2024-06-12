@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId = "kr.ac.duksung.birth"
-        minSdk = 21
-        targetSdk = 33
+        minSdk = 31
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

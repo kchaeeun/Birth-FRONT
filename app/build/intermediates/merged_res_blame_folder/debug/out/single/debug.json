@@ -72,10 +72,6 @@
         "source": "kr.ac.duksung.birth.app-main-52:/mipmap-hdpi/ic_launcher_foreground_logo.webp"
     },
     {
-        "merged": "kr.ac.duksung.birth.app-merged_res-50:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "kr.ac.duksung.birth.app-pngs-46:/drawable-anydpi-v24/ic_launcher_foreground.xml"
-    },
-    {
         "merged": "kr.ac.duksung.birth.app-merged_res-50:/drawable_anim_color_change.xml.flat",
         "source": "kr.ac.duksung.birth.app-main-52:/drawable/anim_color_change.xml"
     },
@@ -102,6 +98,10 @@
     {
         "merged": "kr.ac.duksung.birth.app-merged_res-50:/font_ssflowerroadregular.otf.flat",
         "source": "kr.ac.duksung.birth.app-main-52:/font/ssflowerroadregular.otf"
+    },
+    {
+        "merged": "kr.ac.duksung.birth.app-merged_res-50:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "kr.ac.duksung.birth.app-main-52:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "kr.ac.duksung.birth.app-merged_res-50:/drawable_three_dot.png.flat",

@@ -24,6 +24,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothSocket;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -37,7 +38,9 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.PowerManager;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -96,7 +99,7 @@ public class BluetoothActivity extends AppCompatActivity
     private AppCompatButton btnCerti;
 
 
-    private static final String BASE_URL = "http://192.168.0.21:8080";
+    private static final String BASE_URL = "http://192.168.191.141:8080";
     private static Retrofit retrofit;
 
     public static Retrofit getRetrofitInstance() {
@@ -124,8 +127,7 @@ public class BluetoothActivity extends AppCompatActivity
 
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
 
@@ -141,67 +143,50 @@ public class BluetoothActivity extends AppCompatActivity
         }
 
         IntentFilter filter = new IntentFilter("kr.ac.duksung.birth.DATA_ACTION");
-        registerReceiver(receiver, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(receiver, filter, RECEIVER_EXPORTED);
+        }
 
-        // 알림 설정
+
+//        // 알림 설정
         if (boolValue == 1) {
             // 정적 선언
             CheckAlarmReceiver.Companion.setupNotificationChannel(this);
 
         }
-
+//
         PowerManager pm = (PowerManager) getApplicationContext().getSystemService(POWER_SERVICE);
-        boolean isWhiteListing = false;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-            isWhiteListing = pm.isIgnoringBatteryOptimizations(getApplicationContext().getPackageName());
-        }
+        boolean isWhiteListing = pm.isIgnoringBatteryOptimizations(getApplicationContext().getPackageName());
         if (!isWhiteListing) {
             Intent intent = new Intent();
-            intent.setAction(android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+            intent.setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
             intent.setData(Uri.parse("package:" + getApplicationContext().getPackageName()));
             startActivity(intent);
         }
 
-//        if (RealService.serviceIntent==null) {
-//            serviceIntent = new Intent(this, RealService.class);
-//            startService(serviceIntent);
-//        } else {
-//            serviceIntent = RealService.serviceIntent;//getInstance().getApplication();
-//            Toast.makeText(getApplicationContext(), "already", Toast.LENGTH_LONG).show();
-//        }
+        BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
+        BluetoothAdapter bluetoothAdapter = bluetoothManager.getAdapter();
 
-        // Bluetooth 권한 확인
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.BLUETOOTH}, REQUEST_BLUETOOTH_PERMISSION);
+        if (bluetoothAdapter == null) {
+            // Device doesn't support Bluetooth
+            showErrorDialog("This device does not support Bluetooth.");
+        } else if (!bluetoothAdapter.isEnabled()) {
+            // Bluetooth is not enabled, prompt the user to enable it
+            Intent enableBluetoothIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBluetoothIntent, REQUEST_ENABLE_BLUETOOTH);
         } else {
-            // Bluetooth 활성화 확인
-            BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-            if (bluetoothAdapter == null) {
-                showErrorDialog("This device does not support Bluetooth.");
-            } else if (!bluetoothAdapter.isEnabled()) {
-                Intent enableBluetoothIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                startActivityForResult(enableBluetoothIntent, REQUEST_ENABLE_BLUETOOTH);
-            } else {
-            }
+            Log.d(TAG, "Initialisation successful.");
+//            startBluetoothConnection();
+            //bluetooth is enabled, proceed with your Bluetooth operations
         }
 
-//        Button sendButton = (Button)findViewById(R.id.send_button);
-//        sendButton.setOnClickListener(new View.OnClickListener(){
-//            public void onClick(View v){
-//                String sendMessage = mInputEditText.getText().toString();
-//                if ( sendMessage.length() > 0 ) {
-//                    sendMessage(sendMessage);
-//                }
-//            }
-//        });
-
-        mInputEditText = (TextView)findViewById(R.id.input_string_text);
-        mName = (TextView)findViewById(R.id.textView2);
-        noCertifi = (TextView)findViewById(R.id.tv_no_certifi);
-        certifiText = (TextView)findViewById(R.id.certi_text);
-        layout = (ConstraintLayout)findViewById(R.id.constraintLayout2);
-        btnSeat = (AppCompatButton)findViewById(R.id.appCompatButton2);
-        btnCerti = (AppCompatButton)findViewById(R.id.appCompatButton);
+        mInputEditText = (TextView) findViewById(R.id.input_string_text);
+        mName = (TextView) findViewById(R.id.textView2);
+        noCertifi = (TextView) findViewById(R.id.tv_no_certifi);
+        certifiText = (TextView) findViewById(R.id.certi_text);
+        layout = (ConstraintLayout) findViewById(R.id.constraintLayout2);
+        btnSeat = (AppCompatButton) findViewById(R.id.appCompatButton2);
+        btnCerti = (AppCompatButton) findViewById(R.id.appCompatButton);
 
         //        ListView mMessageListview = (ListView) findViewById(R.id.message_listview);
         // include된 레이아웃의 루트 뷰를 찾습니다.
@@ -230,11 +215,11 @@ public class BluetoothActivity extends AppCompatActivity
         });
 
         btnSeat.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), SeatActivity.class);
-                    startActivity(intent);
-    }
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SeatActivity.class);
+                startActivity(intent);
+            }
         });
 
         btnCerti.setOnClickListener(new View.OnClickListener() {
@@ -244,7 +229,6 @@ public class BluetoothActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-
 
 
         // SharedPreferences 객체 가져오기
@@ -259,27 +243,17 @@ public class BluetoothActivity extends AppCompatActivity
         // 변경사항 적용
         editor.apply();
 
-//
-//        List<String> info = Arrays.asList(numValue.split("-"));
-//
-//        mName.setText(info.get(0) + " 임산부님 환영합니다.");
-//
-//        // 날짜 전처리
-//        String year = info.get(1).substring(0,4);
-//        String month = info.get(1).substring(4,6);
-//        String day = info.get(1).substring(6);
-//        String date = year + "년 " + month + "월 " + day + "일";
-//        mInputEditText.append(date);
-
-
-        mConversationArrayAdapter = new ArrayAdapter<>( this,
-                android.R.layout.simple_list_item_1 );
+        mConversationArrayAdapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1);
 //        mMessageListview.setAdapter(mConversationArrayAdapter);
 
         // 권한 처리를 계속 해줘야함. 메서드마다 *************
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
-            // 권한이 없는 경우 권한 요청
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BLUETOOTH}, REQUEST_BLUETOOTH_PERMISSION);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{
+                    Manifest.permission.BLUETOOTH_SCAN,
+                    Manifest.permission.BLUETOOTH_CONNECT
+            }, REQUEST_BLUETOOTH_PERMISSION);
         } else {
             // 권한이 이미 허용된 경우 블루투스 작업 수행
             // 여기에 블루투스 관련 코드 추가
@@ -288,7 +262,7 @@ public class BluetoothActivity extends AppCompatActivity
 
         Log.d( TAG, "Initalizing Bluetooth adapter...");
 
-        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        mBluetoothAdapter = bluetoothAdapter;
         if (mBluetoothAdapter == null) {
             showErrorDialog("This device is not implement Bluetooth.");
             return;
@@ -306,18 +280,18 @@ public class BluetoothActivity extends AppCompatActivity
         Log.d(TAG, "numValue in onCreate: " + numValue);
     }
 
-    private void startBluetoothService() {
-        Log.d(TAG, "numValue in startBluetoothService: " + numValue);
-
+//    private void startBluetoothService() {
+//        Log.d(TAG, "numValue in startBluetoothService: " + numValue);
+//
 //        String deviceAddress = "YOUR_DEVICE_ADDRESS";  // 연결할 Bluetooth 장치의 주소를 설정하세요.
 //        Intent serviceIntent = new Intent(this, TestService.class);
 //        serviceIntent.putExtra("device_address", deviceAddress);
 //        ContextCompat.startForegroundService(this, serviceIntent);
-
+//
 //        Intent intent = new Intent(getApplicationContext(), BluetoothService.class); // 실행시키고픈 서비스클래스 이름
 //        intent.putExtra("command", numValue); // 필요시 인텐트에 필요한 데이터를 담아준다
 //        startService(intent); // 서비스 실행!
-    }
+//    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -331,9 +305,9 @@ public class BluetoothActivity extends AppCompatActivity
             }
         }
     }
-
+//
     // 주기적으로 메시지를 보내기 위한 Handler
-    private final Handler mHandler = new Handler();
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
     private static final int MESSAGE_SEND_INTERVAL = 5000; // 5 초
 
     private final Runnable mSendRunnable = new Runnable() {
@@ -348,8 +322,8 @@ public class BluetoothActivity extends AppCompatActivity
             mHandler.postDelayed(this, MESSAGE_SEND_INTERVAL);
         }
     };
-
-
+//
+//
     @Override
     public void onResume() {
         super.onResume();
@@ -357,7 +331,7 @@ public class BluetoothActivity extends AppCompatActivity
         // 액티비티가 다시 시작될 때 메시지를 주기적으로 보내기 시작
         mHandler.postDelayed(mSendRunnable, MESSAGE_SEND_INTERVAL);
     }
-
+//
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -445,9 +419,12 @@ public class BluetoothActivity extends AppCompatActivity
         ConnectTask(BluetoothDevice bluetoothDevice) {
             mBluetoothDevice = bluetoothDevice;
 
-            if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
-                // 권한이 없는 경우 권한 요청
-                ActivityCompat.requestPermissions(BluetoothActivity.this, new String[]{Manifest.permission.BLUETOOTH}, REQUEST_BLUETOOTH_PERMISSION);
+            if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(BluetoothActivity.this, new String[]{
+                        Manifest.permission.BLUETOOTH_SCAN,
+                        Manifest.permission.BLUETOOTH_CONNECT
+                }, REQUEST_BLUETOOTH_PERMISSION);
             } else {
                 // 권한이 이미 허용된 경우 블루투스 작업 수행
                 // 여기에 블루투스 관련 코드 추가
@@ -471,9 +448,12 @@ public class BluetoothActivity extends AppCompatActivity
         public Boolean doInBackground(Void... params) {
             Log.d(TAG, "numValue in ConnectTask doInBackground: " + numValue);
 
-            if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
-                // 권한이 없는 경우 권한 요청
-                ActivityCompat.requestPermissions(BluetoothActivity.this, new String[]{Manifest.permission.BLUETOOTH}, REQUEST_BLUETOOTH_PERMISSION);
+            if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(BluetoothActivity.this, new String[]{
+                        Manifest.permission.BLUETOOTH_SCAN,
+                        Manifest.permission.BLUETOOTH_CONNECT
+                }, REQUEST_BLUETOOTH_PERMISSION);
             } else {
                 // 권한이 이미 허용된 경우 블루투스 작업 수행
                 // 여기에 블루투스 관련 코드 추가
@@ -509,11 +489,9 @@ public class BluetoothActivity extends AppCompatActivity
                 connected(mBluetoothSocket);
 
                 // 호출 조건 추가
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    // 이제 boolValue가 1인 경우에만 알람 매니저 설정
-                    Log.d("alarmManagerUtil", "alarmStart");
-                    AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
-                }
+                // 이제 boolValue가 1인 경우에만 알람 매니저 설정
+                Log.d("alarmManagerUtil", "alarmStart");
+                AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
                 checkNotificationPermission();
             }
 
@@ -539,9 +517,9 @@ public class BluetoothActivity extends AppCompatActivity
             mConnectedTask.write(sendMessage);
         }
     }
-
-
-
+//
+//
+//
     private class ConnectedTask extends AsyncTask<Void, Integer, Boolean> {
 
         private InputStream mInputStream = null;
@@ -640,11 +618,9 @@ public class BluetoothActivity extends AppCompatActivity
             Log.d("vvvv", String.valueOf(value));
             if (value == 1) {
                 CheckAlarmReceiver.Companion.setupNotificationChannel(BluetoothActivity.this);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    // 이제 boolValue가 1인 경우에만 알람 매니저 설정
-                    Log.d("alarmManagerUtil", "alarmStart");
-                    AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
-                }
+                // 이제 boolValue가 1인 경우에만 알람 매니저 설정
+                Log.d("alarmManagerUtil", "alarmStart");
+                AlarmManagerUtil.Companion.setRepeatingAlarm(getApplicationContext());
                 checkNotificationPermission();
             } else if (value == 2) {
                 boolValue = 1;
@@ -706,16 +682,21 @@ public class BluetoothActivity extends AppCompatActivity
         }
 
     }
-
+//
     private void startBluetoothConnection() {
-        if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
-            // 권한이 없는 경우 권한 요청
-            ActivityCompat.requestPermissions(BluetoothActivity.this, new String[]{Manifest.permission.BLUETOOTH}, REQUEST_BLUETOOTH_PERMISSION);
-        } else {
-            // 권한이 이미 허용된 경우 블루투스 작업 수행
-            // 여기에 블루투스 관련 코드 추가
-        }
 
+        if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(BluetoothActivity.this, new String[]{
+                    Manifest.permission.BLUETOOTH_SCAN,
+                    Manifest.permission.BLUETOOTH_CONNECT,
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+            }, REQUEST_BLUETOOTH_PERMISSION);
+        } else {
+            // 위치 권한이 이미 허용된 경우 블루투스 작업 수행
+//            BluetoothAdapter bluetoothAdapter = mBluetoothAdapter.getDefaultAdapter();
             Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
             Log.d("pariedDevicesALL", "Paired Devices: " + pairedDevices);
             if (pairedDevices != null && !pairedDevices.isEmpty()) {
@@ -730,81 +711,36 @@ public class BluetoothActivity extends AppCompatActivity
                         break;
                     }
                 }
-
-        } else {
-            // Bluetooth가 비활성화된 경우 사용자에게 블루투스 활성화 요청
-            Intent enableBluetoothIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableBluetoothIntent, REQUEST_ENABLE_BLUETOOTH);
-        }
-    }
-
-    public void showPairedDevicesListDialog() {
-
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
-            // 권한이 없는 경우 권한 요청
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BLUETOOTH}, REQUEST_BLUETOOTH_PERMISSION);
-            return; // 권한 요청 후에는 함수 종료
-        }
-
-        Set<BluetoothDevice> devices = mBluetoothAdapter.getBondedDevices();
-        final BluetoothDevice[] pairedDevices = devices.toArray(new BluetoothDevice[0]);
-
-        if (pairedDevices.length == 0) {
-            showQuitDialog("No devices have been paired.\n" + "You must pair it with another device.");
-            return;
-        }
-
-        String[] items;
-        items = new String[pairedDevices.length];
-        for (int i=0;i<pairedDevices.length;i++) {
-            items[i] = pairedDevices[i].getName();
-        }
-
-        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
-        builder.setTitle("앉은 자리를 선택하세요");
-        builder.setCancelable(false);
-        builder.setItems(items, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-
-                ConnectTask task = new ConnectTask(pairedDevices[which]);
-                task.execute();
             }
-        });
-        builder.create().show();
+        }
     }
 
-
-//    public void showPairedDevicesListDialog()
-//    {
 //
-//        if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
-//            // 권한이 없는 경우 권한 요청
-//            ActivityCompat.requestPermissions(BluetoothActivity.this, new String[]{Manifest.permission.BLUETOOTH}, REQUEST_BLUETOOTH_PERMISSION);
-//        } else {
-//            // 권한이 이미 허용된 경우 블루투스 작업 수행
-//            // 여기에 블루투스 관련 코드 추가
+//    public void showPairedDevicesListDialog() {
+//
+//        if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED ||
+//                ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+//            ActivityCompat.requestPermissions(BluetoothActivity.this, new String[]{
+//                    Manifest.permission.BLUETOOTH_SCAN,
+//                    Manifest.permission.BLUETOOTH_CONNECT
+//            }, REQUEST_BLUETOOTH_PERMISSION);
 //        }
+//
 //        Set<BluetoothDevice> devices = mBluetoothAdapter.getBondedDevices();
 //        final BluetoothDevice[] pairedDevices = devices.toArray(new BluetoothDevice[0]);
 //
-//        if ( pairedDevices.length == 0 ){
-//            showQuitDialog( "No devices have been paired.\n"
-//                    +"You must pair it with another device.");
+//        if (pairedDevices.length == 0) {
+//            showQuitDialog("No devices have been paired.\n" + "You must pair it with another device.");
 //            return;
 //        }
 //
-//        CustomDeviceListDialog dialog = new CustomDeviceListDialog(this, pairedDevices);
-//        dialog.show();
-
 //        String[] items;
 //        items = new String[pairedDevices.length];
 //        for (int i=0;i<pairedDevices.length;i++) {
 //            items[i] = pairedDevices[i].getName();
 //        }
 //
-//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
 //        builder.setTitle("앉은 자리를 선택하세요");
 //        builder.setCancelable(false);
 //        builder.setItems(items, new DialogInterface.OnClickListener() {
@@ -818,9 +754,53 @@ public class BluetoothActivity extends AppCompatActivity
 //        });
 //        builder.create().show();
 //    }
-
-
-
+//
+//
+////    public void showPairedDevicesListDialog()
+////    {
+////
+////        if (ContextCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
+////            // 권한이 없는 경우 권한 요청
+////            ActivityCompat.requestPermissions(BluetoothActivity.this, new String[]{Manifest.permission.BLUETOOTH}, REQUEST_BLUETOOTH_PERMISSION);
+////        } else {
+////            // 권한이 이미 허용된 경우 블루투스 작업 수행
+////            // 여기에 블루투스 관련 코드 추가
+////        }
+////        Set<BluetoothDevice> devices = mBluetoothAdapter.getBondedDevices();
+////        final BluetoothDevice[] pairedDevices = devices.toArray(new BluetoothDevice[0]);
+////
+////        if ( pairedDevices.length == 0 ){
+////            showQuitDialog( "No devices have been paired.\n"
+////                    +"You must pair it with another device.");
+////            return;
+////        }
+////
+////        CustomDeviceListDialog dialog = new CustomDeviceListDialog(this, pairedDevices);
+////        dialog.show();
+//
+////        String[] items;
+////        items = new String[pairedDevices.length];
+////        for (int i=0;i<pairedDevices.length;i++) {
+////            items[i] = pairedDevices[i].getName();
+////        }
+////
+////        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+////        builder.setTitle("앉은 자리를 선택하세요");
+////        builder.setCancelable(false);
+////        builder.setItems(items, new DialogInterface.OnClickListener() {
+////            @Override
+////            public void onClick(DialogInterface dialog, int which) {
+////                dialog.dismiss();
+////
+////                ConnectTask task = new ConnectTask(pairedDevices[which]);
+////                task.execute();
+////            }
+////        });
+////        builder.create().show();
+////    }
+//
+//
+//
     public void showErrorDialog(String message)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -839,8 +819,8 @@ public class BluetoothActivity extends AppCompatActivity
         });
         builder.create().show();
     }
-
-
+//
+//
     public void showQuitDialog(String message)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -856,7 +836,7 @@ public class BluetoothActivity extends AppCompatActivity
         });
         builder.create().show();
     }
-
+//
     void sendMessage(Integer msg){
 
         if ( mConnectedTask != null ) {
@@ -865,8 +845,8 @@ public class BluetoothActivity extends AppCompatActivity
             mConversationArrayAdapter.insert("Me:  " + msg, 0);
         }
     }
-
-
+//
+//
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
@@ -882,19 +862,18 @@ public class BluetoothActivity extends AppCompatActivity
             }
         }
     }
-
+//
     private void checkNotificationPermission() {
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS)
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.MANAGE_DEVICE_POLICY_ACCESSIBILITY)
                 != PackageManager.PERMISSION_GRANTED) {
             // 권한이 없을 경우 요청
             ActivityCompat.requestPermissions(
                     this,
-                    new String[]{android.Manifest.permission.POST_NOTIFICATIONS},
+                    new String[]{Manifest.permission.MANAGE_DEVICE_POLICY_ACCESSIBILITY},
                     CheckAlarmReceiver.REQUEST_NOTIFICATION_PERMISSION
             );
         }
     }
-
 
 
 }
