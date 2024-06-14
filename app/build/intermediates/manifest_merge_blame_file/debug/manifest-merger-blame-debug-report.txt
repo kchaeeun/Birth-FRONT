@@ -69,15 +69,15 @@
 36-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:25:22-75
 37
 38    <permission
-38-->[androidx.core:core:1.14.0-alpha01] C:\Users\kangc\.gradle\caches\transforms-3\5fb4b64045f0bec297284e1892306e06\transformed\core-1.14.0-alpha01\AndroidManifest.xml:22:5-24:47
+38-->[androidx.core:core:1.13.1] C:\Users\kangc\.gradle\caches\transforms-3\5705eb087d5c182577ab0509188fd51c\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
 39        android:name="kr.ac.duksung.birth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-39-->[androidx.core:core:1.14.0-alpha01] C:\Users\kangc\.gradle\caches\transforms-3\5fb4b64045f0bec297284e1892306e06\transformed\core-1.14.0-alpha01\AndroidManifest.xml:23:9-81
+39-->[androidx.core:core:1.13.1] C:\Users\kangc\.gradle\caches\transforms-3\5705eb087d5c182577ab0509188fd51c\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
 40        android:protectionLevel="signature" />
-40-->[androidx.core:core:1.14.0-alpha01] C:\Users\kangc\.gradle\caches\transforms-3\5fb4b64045f0bec297284e1892306e06\transformed\core-1.14.0-alpha01\AndroidManifest.xml:24:9-44
+40-->[androidx.core:core:1.13.1] C:\Users\kangc\.gradle\caches\transforms-3\5705eb087d5c182577ab0509188fd51c\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
 41
 42    <uses-permission android:name="kr.ac.duksung.birth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-42-->[androidx.core:core:1.14.0-alpha01] C:\Users\kangc\.gradle\caches\transforms-3\5fb4b64045f0bec297284e1892306e06\transformed\core-1.14.0-alpha01\AndroidManifest.xml:26:5-97
-42-->[androidx.core:core:1.14.0-alpha01] C:\Users\kangc\.gradle\caches\transforms-3\5fb4b64045f0bec297284e1892306e06\transformed\core-1.14.0-alpha01\AndroidManifest.xml:26:22-94
+42-->[androidx.core:core:1.13.1] C:\Users\kangc\.gradle\caches\transforms-3\5705eb087d5c182577ab0509188fd51c\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+42-->[androidx.core:core:1.13.1] C:\Users\kangc\.gradle\caches\transforms-3\5705eb087d5c182577ab0509188fd51c\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
 43
 44    <application
 44-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:27:5-118:19
@@ -86,7 +86,7 @@
 46        android:allowBackup="true"
 46-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:29:13-39
 47        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-47-->[androidx.core:core:1.14.0-alpha01] C:\Users\kangc\.gradle\caches\transforms-3\5fb4b64045f0bec297284e1892306e06\transformed\core-1.14.0-alpha01\AndroidManifest.xml:28:18-86
+47-->[androidx.core:core:1.13.1] C:\Users\kangc\.gradle\caches\transforms-3\5705eb087d5c182577ab0509188fd51c\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 48        android:dataExtractionRules="@xml/data_extraction_rules"
 48-->D:\3-2\androidProgramming\CAPSTONE\Birth\app\src\main\AndroidManifest.xml:30:13-69
 49        android:debuggable="true"

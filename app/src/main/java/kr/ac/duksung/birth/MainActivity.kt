@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 //        checkNotificationPermission()
 //        setupToolbarButton()
 
-        binding.include.constraint11.setOnClickListener {
+        binding.include.constraintLayout10.setOnClickListener {
             Log.d("버튼 눌림 확인", "눌림")
             val intent = Intent(this, SirenActivity::class.java)
             startActivity(intent)

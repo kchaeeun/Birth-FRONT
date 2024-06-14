@@ -4,23 +4,6 @@
             "outputFile": "kr.ac.duksung.birth.app-mergeDebugResources-48:/values-fa/values-fa.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kangc\\.gradle\\caches\\transforms-3\\5fb4b64045f0bec297284e1892306e06\\transformed\\core-1.14.0-alpha01\\res\\values-fa\\values-fa.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,154,256,355,455,556,662,779",
-                        "endColumns": "98,101,98,99,100,105,116,100",
-                        "endOffsets": "149,251,350,450,551,657,774,875"
-                    },
-                    "to": {
-                        "startLines": "38,39,40,41,42,43,44,111",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3413,3512,3614,3713,3813,3914,4020,9386",
-                        "endColumns": "98,101,98,99,100,105,116,100",
-                        "endOffsets": "3507,3609,3708,3808,3909,4015,4132,9482"
-                    }
-                },
-                {
                     "source": "C:\\Users\\kangc\\.gradle\\caches\\transforms-3\\3449c2a4c8f8a6ebdaea0159b6dd7bdc\\transformed\\navigation-ui-2.7.7\\res\\values-fa\\values-fa.xml",
                     "from": {
                         "startLines": "2,3",
@@ -71,6 +54,23 @@
                         "startOffsets": "309,419,520,631,715,816,931,1011,1088,1181,1276,1368,1462,1564,1659,1756,1850,1943,2033,2115,2223,2327,2425,2531,2636,2741,2898,9304",
                         "endColumns": "109,100,110,83,100,114,79,76,92,94,91,93,101,94,96,93,92,89,81,107,103,97,105,104,104,156,100,81",
                         "endOffsets": "414,515,626,710,811,926,1006,1083,1176,1271,1363,1457,1559,1654,1751,1845,1938,2028,2110,2218,2322,2420,2526,2631,2736,2893,2994,9381"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\kangc\\.gradle\\caches\\transforms-3\\5705eb087d5c182577ab0509188fd51c\\transformed\\core-1.13.1\\res\\values-fa\\values-fa.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,154,256,355,455,556,662,779",
+                        "endColumns": "98,101,98,99,100,105,116,100",
+                        "endOffsets": "149,251,350,450,551,657,774,875"
+                    },
+                    "to": {
+                        "startLines": "38,39,40,41,42,43,44,111",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3413,3512,3614,3713,3813,3914,4020,9386",
+                        "endColumns": "98,101,98,99,100,105,116,100",
+                        "endOffsets": "3507,3609,3708,3808,3909,4015,4132,9482"
                     }
                 }
             ]

@@ -100,7 +100,7 @@ public class BluetoothActivity extends AppCompatActivity
     private AppCompatButton btnCerti;
 
 
-    private static final String BASE_URL = "http://192.168.191.141:8080";
+    private static final String BASE_URL = "http://192.168.137.224:8080";
     private static Retrofit retrofit;
 
     public static Retrofit getRetrofitInstance() {
