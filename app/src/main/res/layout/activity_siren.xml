@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SirenFragment">
+
+    <include
+            layout="@layout/activity_toolbar"
+            android:id="@+id/include" />
+
+    <ImageView
+            android:layout_width="122dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_birth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            android:layout_marginTop="104dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:id="@+id/constraintLayout8">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="신고 내용"
+                android:textSize="20sp"
+                android:textColor="#883C3F"
+                android:fontFamily="@font/pretendard_semibold"
+                android:id="@+id/textView9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="273dp"
+                android:layout_height="145dp"
+                android:background="@drawable/siren_box"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="9dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="신고할 내용을 작성해주세요."
+                    android:fontFamily="@font/pretendard_regular"
+                    android:textSize="13sp"
+                    android:textColorHint="#545454"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            android:layout_marginTop="21dp"
+            android:id="@+id/constraintLayout7"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="신고 항목"
+                android:textSize="20sp"
+                android:textColor="#883C3F"
+                android:fontFamily="@font/pretendard_semibold"
+                android:id="@+id/textView8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp">
+            <!--https://bingguel.tistory.com/15-->
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                    android:text="어플 오작동"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:textColor="#1e1e1e"
+                    android:layout_width="200dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="7dp"
+                    android:id="@+id/radioButton" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                    android:text="비임산부 임산부 배려석 착석"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:textColor="#1e1e1e"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="7dp"
+                    android:id="@+id/radioButton2" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                    android:text="임산부 인증 오류"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:textColor="#1e1e1e"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:id="@+id/radioButton3" />
+        </RadioGroup>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="신고"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_check_background"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="29dp" />
+
+    <include
+            layout="@layout/repeat_copyright"
+            android:id="@+id/include2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

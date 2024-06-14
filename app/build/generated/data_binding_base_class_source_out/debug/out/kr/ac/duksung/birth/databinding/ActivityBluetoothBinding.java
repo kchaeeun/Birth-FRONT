@@ -4,9 +4,11 @@ package kr.ac.duksung.birth.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -20,25 +22,56 @@ public final class ActivityBluetoothBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView connectionStatusTextview;
+  public final AppCompatButton appCompatButton;
+
+  @NonNull
+  public final AppCompatButton appCompatButton2;
+
+  @NonNull
+  public final TextView certiText;
+
+  @NonNull
+  public final ConstraintLayout constraintLayout;
+
+  @NonNull
+  public final ConstraintLayout constraintLayout2;
+
+  @NonNull
+  public final ActivityToolbarBinding include;
 
   @NonNull
   public final TextView inputStringText;
 
   @NonNull
+  public final TextView pregText;
+
+  @NonNull
+  public final ImageView textView;
+
+  @NonNull
   public final TextView textView2;
 
   @NonNull
-  public final TextView textView3;
+  public final TextView tvNoCertifi;
 
   private ActivityBluetoothBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView connectionStatusTextview, @NonNull TextView inputStringText,
-      @NonNull TextView textView2, @NonNull TextView textView3) {
+      @NonNull AppCompatButton appCompatButton, @NonNull AppCompatButton appCompatButton2,
+      @NonNull TextView certiText, @NonNull ConstraintLayout constraintLayout,
+      @NonNull ConstraintLayout constraintLayout2, @NonNull ActivityToolbarBinding include,
+      @NonNull TextView inputStringText, @NonNull TextView pregText, @NonNull ImageView textView,
+      @NonNull TextView textView2, @NonNull TextView tvNoCertifi) {
     this.rootView = rootView;
-    this.connectionStatusTextview = connectionStatusTextview;
+    this.appCompatButton = appCompatButton;
+    this.appCompatButton2 = appCompatButton2;
+    this.certiText = certiText;
+    this.constraintLayout = constraintLayout;
+    this.constraintLayout2 = constraintLayout2;
+    this.include = include;
     this.inputStringText = inputStringText;
+    this.pregText = pregText;
+    this.textView = textView;
     this.textView2 = textView2;
-    this.textView3 = textView3;
+    this.tvNoCertifi = tvNoCertifi;
   }
 
   @Override
@@ -68,15 +101,58 @@ public final class ActivityBluetoothBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.connection_status_textview;
-      TextView connectionStatusTextview = ViewBindings.findChildViewById(rootView, id);
-      if (connectionStatusTextview == null) {
+      id = R.id.appCompatButton;
+      AppCompatButton appCompatButton = ViewBindings.findChildViewById(rootView, id);
+      if (appCompatButton == null) {
         break missingId;
       }
+
+      id = R.id.appCompatButton2;
+      AppCompatButton appCompatButton2 = ViewBindings.findChildViewById(rootView, id);
+      if (appCompatButton2 == null) {
+        break missingId;
+      }
+
+      id = R.id.certi_text;
+      TextView certiText = ViewBindings.findChildViewById(rootView, id);
+      if (certiText == null) {
+        break missingId;
+      }
+
+      id = R.id.constraintLayout;
+      ConstraintLayout constraintLayout = ViewBindings.findChildViewById(rootView, id);
+      if (constraintLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.constraintLayout2;
+      ConstraintLayout constraintLayout2 = ViewBindings.findChildViewById(rootView, id);
+      if (constraintLayout2 == null) {
+        break missingId;
+      }
+
+      id = R.id.include;
+      View include = ViewBindings.findChildViewById(rootView, id);
+      if (include == null) {
+        break missingId;
+      }
+      ActivityToolbarBinding binding_include = ActivityToolbarBinding.bind(include);
 
       id = R.id.input_string_text;
       TextView inputStringText = ViewBindings.findChildViewById(rootView, id);
       if (inputStringText == null) {
+        break missingId;
+      }
+
+      id = R.id.preg_text;
+      TextView pregText = ViewBindings.findChildViewById(rootView, id);
+      if (pregText == null) {
+        break missingId;
+      }
+
+      id = R.id.textView;
+      ImageView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
         break missingId;
       }
 
@@ -86,14 +162,15 @@ public final class ActivityBluetoothBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView3;
-      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
-      if (textView3 == null) {
+      id = R.id.tv_no_certifi;
+      TextView tvNoCertifi = ViewBindings.findChildViewById(rootView, id);
+      if (tvNoCertifi == null) {
         break missingId;
       }
 
-      return new ActivityBluetoothBinding((ConstraintLayout) rootView, connectionStatusTextview,
-          inputStringText, textView2, textView3);
+      return new ActivityBluetoothBinding((ConstraintLayout) rootView, appCompatButton,
+          appCompatButton2, certiText, constraintLayout, constraintLayout2, binding_include,
+          inputStringText, pregText, textView, textView2, tvNoCertifi);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

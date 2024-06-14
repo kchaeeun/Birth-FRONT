@@ -4,17 +4,25 @@
     <!-- 위치 권한 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 블루투스 권한 -->
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- FOREGROUND 권한ㅏ -->
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-
+    <!-- Request legacy Bluetooth permissions on older devices. -->
+    <uses-permission android:name="android.permission.BLUETOOTH"
+            android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"
+            android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <!-- Include "neverForLocation" only if you can strongly assert that
+         your app never derives physical location from Bluetooth scan results. -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+            android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
 
     <application
             android:name=".BluetoothApplication"
@@ -26,8 +34,27 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.Birth"
-            android:usesCleartextTraffic="true"
-            tools:targetApi="31">
+            android:usesCleartextTraffic="true">
+<!--        <activity-->
+<!--                android:name=".SeatActivity"-->
+<!--                android:exported="false"-->
+<!--                android:label="@string/title_activity_seat"-->
+<!--                android:theme="@style/Theme.Birth" />-->
+        <activity
+                android:name=".BaseActivity"
+                android:exported="false"
+                android:label="@string/title_activity_base"
+                android:theme="@style/Theme.Birth" />
+        <activity
+                android:name=".SeatActivity"
+                android:exported="false" />
+        <activity
+                android:name=".NoCertifiActivity"
+                android:exported="false" />
+        <activity
+                android:name=".SirenActivity"
+                android:exported="false" />
+
         <service
                 android:name=".service.BluetoothService"
                 android:enabled="true"
@@ -43,11 +70,13 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".alarm.CheckAlarmReceiver"
+        <receiver
+                android:name=".alarm.CheckAlarmReceiver"
                 android:exported="false">
             <intent-filter>
-<!--                <action android:name="alarm-action"/>-->
-                <action android:name="kr.ac.duksung.birth.YES_ACTION"/>
+
+                <!-- <action android:name="alarm-action"/> -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
         <receiver android:name=".alarm.YesActionReceiver"
@@ -62,12 +91,11 @@
                 <action android:name="kr.ac.duksung.birth.NO_ACTION"/>
             </intent-filter>
         </receiver>
-
-<!--        <activity-->
-<!--                android:name=".CheckActivity"-->
-<!--                android:exported="false" />-->
+        <!-- <activity -->
+        <!-- android:name=".CheckActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
-                android:name=".MainActivity"
+                android:name=".SplashActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -75,6 +103,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
         <activity
                 android:name=".BluetoothActivity"
                 android:exported="true" />
@@ -82,8 +111,10 @@
         <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts" />
-
-                <service android:name=".TestService" />
+        <meta-data
+            android:name="alarm_picture"
+            android:resource="@drawable/ic_alarm_preg"/>
+        <service android:name=".TestService" />
     </application>
 
 </manifest>

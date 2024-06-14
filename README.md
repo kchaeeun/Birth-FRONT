@@ -12,6 +12,9 @@
 - [오류해결](https://da-ye.tistory.com/111) : port번호 변경 
 - [오류해결] 코드 복붙시 Segement fault 발생한다면 첫번째 링크 확인 후 3번 부터 실행
 
+### 🎦 gif 애니메이션 삽입
+- [lottie 애니메이션 사용](https://develop-oj.tistory.com/67)
+
 ### 📍 Birth 앱 실행시 주의사항
 1. 에뮬레이터(안드로이드 스튜디오)와 서버(인텔리제이), MySQL 실행
 2. 서버와 에뮬 연동을 위해 Wifi를 동일한 것으로 잡을 것(핫스팟, 와이파이 전부 가능)
@@ -26,4 +29,4 @@
 ### 🛠️ 임베디드와 블루투스 통신
 - [아두이노와 bluetooth 통신](https://ddangeun.tistory.com/59)
 ---
-✨ : 구현 시 사용
+✨ : 구현 시 사용=====

@@ -3,53 +3,155 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CheckActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="connection state : "
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:fontFamily="@font/inter_semibold" />
+    <include
+            layout="@layout/activity_toolbar"
+            android:id="@+id/include" />
 
-    <TextView
-        android:id="@+id/connection_status_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="임산부님 환영합니다."
-            android:textSize="15sp"
-            android:textAlignment="center"
+    <ImageView
+            android:id="@+id/textView"
+            android:layout_width="122dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_birth"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             android:fontFamily="@font/inter_semibold"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="200dp"
-            android:gravity="center_horizontal" />
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            android:layout_marginTop="104dp" />
 
-    <TextView
-            android:id="@+id/input_string_text"
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
-            android:text="뱃지 만료일 : "
-            android:textColor="#E91E63"
-            android:textSize="20sp"
+            android:id="@+id/constraintLayout2"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="105dp">
+
+        <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:textColor="#1E1E1E"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/pretendard_extrabold"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+                android:id="@+id/preg_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="임산부님"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:textColor="#1E1E1E"
+                android:fontFamily="@font/pretendard_semibold"
+                android:gravity="center_horizontal"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+            android:id="@+id/tv_no_certifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인증된 정보가 없습니다.\n 인증 후 Birth를 이용해주세요"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            android:fontFamily="@font/inter_semibold" />
+            android:textSize="15sp"
+            android:textColor="#1e1e1e"
+            android:lineSpacingExtra="-1dp"
+            android:fontFamily="@font/pretendard_semibold"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:textAlignment="center"
+            android:layout_marginTop="125dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+            android:id="@+id/constraintLayout"
+            android:layout_marginTop="46dp">
+
+        <TextView
+                android:id="@+id/certi_text"
+                android:layout_width="84dp"
+                android:layout_height="24dp"
+                android:text="인증 만료일 : "
+                android:textColor="#883C3F"
+                android:textSize="15sp"
+                android:visibility="invisible"
+                android:fontFamily="@font/pretendard_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/input_string_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"
+                android:textColor="#C84C44"
+                android:textSize="18sp"
+                android:fontFamily="@font/inter_semibold"
+                app:layout_constraintStart_toEndOf="@+id/certi_text"
+                android:layout_marginStart="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="임산부 인증"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/pretendard_regular"
+            android:background="@drawable/btn_check_background_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            android:layout_marginTop="26dp"
+            android:id="@+id/appCompatButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="지하철 임산부석 현황"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/pretendard_regular"
+            android:background="@drawable/btn_check_background_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButton"
+            app:layout_constraintHorizontal_bias="0.504"
+            android:layout_marginTop="20dp"
+            android:id="@+id/appCompatButton2" />
+
+    <include
+            layout="@layout/repeat_copyright"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 <!--<?xml version="1.0" encoding="utf-8"?>-->
 <!--<LinearLayout-->
